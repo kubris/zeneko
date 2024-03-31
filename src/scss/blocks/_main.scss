@@ -1,0 +1,100 @@
+.main {
+	flex-grow: 1;
+}
+
+//- card with link in the center
+.view-cat {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid var(--text-gray);
+
+	&>a {
+		position: relative;
+		font-size: 20px;
+		color: var(--accent);
+		text-transform: uppercase;
+		font-family: var(--font-head);
+		transition: color 0.2s ease-out;
+
+		@include mw768 {
+			font-size: 16px
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 1px;
+			background-color: var(--bg-green);
+			transition: background-color 0.2s ease-out;
+		}
+
+		&:hover {
+			color: var(--text-gray);
+
+			&::after {
+				background-color: var(--text-gray);
+			}
+		}
+	}
+
+	//- disabled link
+	&.off {
+		&>a {
+			color: var(--gray);
+			pointer-events: none;
+
+			&::after {
+				background-color: var(--gray);
+			}
+		}
+	}
+}
+
+.old-price {
+	display: none;
+	color: var(--text-gray);
+	text-decoration: line-through;
+
+	&.on {
+		display: inline;
+	}
+}
+
+.title-block {
+	display: flex;
+	gap: 10px;
+
+	&--right {
+		margin-left: auto;
+		margin-bottom: 30px;
+		position: relative;
+		align-self: flex-end;
+		color: var(--accent);
+		white-space: nowrap;
+		&:hover {
+			color: var(--text-gray);
+			&::after {
+				background-color: var(--text-gray);
+			}
+		}
+		@include mw768 {align-self: center;}
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 1px;
+			background-color: var(--accent);
+		}
+
+		@include mw768 {
+			margin-bottom: 15px
+		}
+	}
+}

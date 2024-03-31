@@ -1,0 +1,31 @@
+:root {
+	--container-width: 1600px;
+	--container-padding: 50px;
+
+	--bg-green: #1F4634;
+	--bg-white: #FFF;
+	--bg-murena: #688276;
+	--bg-gray: #1F4634;
+	
+	--accent: #1F4634;
+	--dark: #222;
+	--white: #FFF;
+	--dark-gray: #757575;
+	--gray: #CBCBCB;
+	--text-gray: #787F87;
+	--light-gray: #EEE;
+	--red: #E14D3C;
+
+	--font-main: "Manrope", sans-serif;
+	--font-head: "New York Extra Large", serif;
+}
+@media (max-width: 1024px) {
+	:root {
+		--container-padding: 54px;
+	}
+}
+@media (max-width: 767px) {
+	:root {
+		--container-padding: 20px;
+	}
+}

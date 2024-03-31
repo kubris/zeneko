@@ -1,0 +1,34 @@
+//- start svg sprite - по hover цвет меняется только с миксином "mono-svg"
+mixin mono-svg(name, cls, vb)
+	- cls = cls || ''
+	- vb = vb || false
+	svg(class="svg-icon " + cls)&attributes({'viewbox': vb})
+		use(xlink:href="images/sprite/sprite-mono.svg#" + name)
+
+mixin multi-svg(name, cls)
+	- cls = cls || ''
+	svg(class="svg-icon svg-" + name + ' ' + cls)
+		use(xlink:href="images/sprite/sprite-multi.svg#" + name)
+
+mixin mono-img(name, cls, alt)
+	- cls = cls || ''
+	- alt = alt || name
+	img(class="svg-icon svg-" + name + ' ' + cls src="images/sprite/sprite-mono.svg#" + name alt=name)
+
+mixin multi-img(name, cls, alt)
+	- cls = cls || ''
+	- alt = alt || name
+	img(class="svg-icon svg-" + name + ' ' + cls src="images/sprite/sprite-multi.svg#" + name alt=name)
+	//- end svg sprite
+
+//- start quantity 
+//- поле карточки, всплывающее после добавления товара в корзину - можно указть кол-во товара
+mixin quantity(minGoods)
+	- minGoods = minGoods || '1'
+	.quantity.jsQ.none
+		button.minus(type='button')
+			span.mns
+		input.result(type='text' data-min=minGoods value='10')
+		button.plus(type='button')
+			span.pls
+//- end quantity

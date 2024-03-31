@@ -1,0 +1,19 @@
+/*
+	+multi-svg('tg-g', 'svg-multi')		//- multi-color svg 
+	+multi-img('tg-g', 'img-multi')		//- multi-color img
+
+	+mono-svg('loupe', 'svg-mono')		//- mono-color svg + :hover(color)
+	+mono-img('loupe', 'img-mono')		//- mono-color img
+*/
+
+//- be wrote "include helpers/mixins" to pug-layout (base, header or footer)
+
+.svg-icon { 
+	transition: 0.2s ease-in;
+	cursor: pointer;
+}
+
+.i-heart {
+	fill: none;
+	stroke: var(--dark);
+}

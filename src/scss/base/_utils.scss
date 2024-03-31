@@ -1,0 +1,172 @@
+.none {
+	display: none !important;
+}
+
+.v-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.no-scroll {
+	overflow: hidden !important;
+}
+
+.accent-color { color: var(--accent); }
+.accent-bg { background-color: var(--accent); }
+
+.underline {
+	position: relative;
+	transition: color 0.2s;
+	&::after {
+		content: "";
+		display: block;
+		height: 1px;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		bottom: -5px;
+		background-color: var(--accent);
+		opacity: 0;
+		transition: opacity 0.2s;
+	}
+	&:hover::after {
+		opacity: 1;
+	}
+}
+
+.un-line {
+	position: relative;
+	white-space: nowrap;
+	align-self: flex-start;
+	transition: background-color 0.2s ease-out, color 0.2s ease-out;
+	&:hover {
+		color: var(--text-gray);
+		&::after {
+			background-color: var(--text-gray);
+		}
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 1px;
+		background-color: var(--accent);
+	}
+}
+
+.transition {
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.fx-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.aic {align-items: center}
+.tt-uc {text-transform: uppercase}
+.tac {text-align: center}
+
+.d-md-none {
+	@include mw1024 {display: none !important}
+}
+.d-sm-none {
+	@include mw768 {display: none !important}
+}
+
+#overlay {
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #000000AA;
+	transition: opacity 0.25s ease-out;
+	pointer-events: none;
+	opacity: 0;
+
+	&.show {
+		opacity: 1;
+	}
+}
+
+.mobile-off {
+	@include mw768 {display: none}
+}
+.mobile-on-inline {
+	display: none;
+	@include mw768 {display: inline}
+}
+
+// иконка плюса для поля счётчика
+.pls {
+	position: relative;
+	display: block;
+	height: 16px;
+	width: 16px;
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 8px;
+		height: 1px;
+		width: 16px;
+		background-color: var(--text-gray);
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		left: 8px;
+		top: 0;
+		display: flex;
+		height: 16px;
+		width: 1px;
+		background-color: var(--text-gray);
+	}
+
+}
+// иконка минуса для поля счётчика
+.mns {
+	position: relative;
+	display: block;
+	height: 16px;
+	width: 16px;
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 8px;
+		height: 1px;
+		width: 16px;
+		background-color: var(--text-gray);
+	}
+}
+
+//animation: show 0.3s linear;
+@keyframes show {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes hide {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}

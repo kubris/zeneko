@@ -1,0 +1,28 @@
+// start modal callback
+.callback-bg
+	.callback
+		button(class="callback-close")
+			+mono-svg('close', '', '0 0 30 30')
+
+		.h2 Ваши идеи заслуживают воплощения
+
+		p.text--sub14 Оставьте контактные данные и наши сотрудники свяжутся с Вами
+		
+		form(class="form-mobile jsForm")
+			label
+				input(type="text" name="userName" placeholder="Имя")
+
+			label
+				input(type="tel" name="userPhone" placeholder="Телефон")
+			
+			label
+				input(name="userMessage" placeholder="Сообщение")
+			
+			div(class="callback__accept")
+				input(class="v-hidden" type="checkbox" name="userAccept")
+				span(class="accept")
+					| Я согласен с 
+					a(href="#") политикой обработки персональных данных
+
+			button(class="btn btn--accent btn--xl" type="submit") Отправить
+// end modal callback

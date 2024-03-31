@@ -1,0 +1,72 @@
+// -- goods-cat
+.goods-cat {
+	&__grid {
+		margin-bottom: 40px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 400px;
+		grid-gap: 30px;
+
+		@include mw1440 {
+			grid-gap: 20px;
+			grid-template-rows: 340px;
+		}
+
+		@include mw1024 {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include mw768 {
+			margin-bottom: 20px;
+			grid-gap: 15px;
+			grid-template-rows: 162px;
+		}
+
+		&-item {
+			img {
+				height: 100%;
+				object-fit: cover;
+			}
+
+			@include mw1024 {
+
+				&:nth-child(2),
+				&:nth-child(4) {
+					display: none;
+				}
+
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&__labels {
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		gap: 20px;
+		@include mw768 {
+			gap: 10px;
+		}
+
+		&>a {
+			padding: 12px 10px;
+			font-size: 26px;
+			font-weight: 500;
+			color: var(--accent);
+			border: 1px solid var(--gray);
+			transition: color 0.2s ease-out, background-color 0.2s ease-out;
+			@include mw768 {
+				padding: 8px;
+				font-size: 14px;
+			}
+
+			&:hover {
+				color: var(--white);
+				background-color: var(--bg-green);
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+.navbar-toggler {
+	height: 20px;
+	width: 30px;
+	cursor: pointer;
+
+	&>span {
+		background: #000000;
+		height: 2px;
+		width: 100%;
+		display: block;
+		position: relative;
+		transition: all ease 0.1s;
+		border-radius: 2px;
+	}
+
+	&>span:after,
+	&>span:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 7px;
+		display: block;
+		height: 2px;
+		width: 100%;
+		background: var(--dark);		
+		transition: all ease 0.2s;
+		border-radius: 2px;
+	}
+
+	&>span:before {
+		top: -7px;
+	}
+}

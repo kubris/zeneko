@@ -1,0 +1,66 @@
+.connect-block {
+
+	&__grid {
+		display: grid;
+		grid-auto-rows: auto;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 32px;
+		@include mw1440 {
+			grid-gap: 20px;
+		}
+		@include mw1024 {
+			grid-gap: 20px;
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@include mw768 {
+			grid-gap: 16px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 280px;
+		border: 1px solid var(--accent);
+		@include mw1440 {
+			height: 210px;
+		}
+		@include mw768 {
+			height: 120px;
+		}
+	}
+
+	&__icon {
+		display: inline-flex;
+		margin-right: 10px;
+		width: 26px;
+		height: 26px;
+		fill: var(--accent);
+		@include mw768 {
+			width: 22px;
+			height: 22px;
+		}
+	}
+	
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		color: var(--accent);
+		font-family: var(--font-head);
+		&>span {
+			font-size: 20px;
+			&::after {
+				background-color: var(--accent);
+			}
+			@include mw768 {font-size: 16px}
+		}
+		&:hover {
+			.connect-block__icon {
+				fill: var(--text-gray);
+			}
+		}
+	}	
+}

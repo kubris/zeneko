@@ -1,0 +1,63 @@
+// -- handmade
+.handmade {
+	&__block {
+		margin-left: auto;
+		margin-right: 215px;
+		max-width: 980px;
+		width: 100%;
+		@include mw1440 {
+			margin-right: 115px;
+		}
+		@include mw1024 {
+			margin-right: 0;
+		}
+
+		&-title {
+			margin-bottom: 20px;
+			font-size: 60px;
+			color: var(--accent);
+			line-height: 120%;
+			font-family: var(--font-head);
+			text-transform: uppercase;
+			@include mw1024 {
+				font-size: 36px;
+				max-width: 660px;
+			}
+			@include mw1024 {
+				font-size: 18px;
+				font-weight: 500;
+			}
+			@include mw768 {
+				max-width: 320px;
+			}
+		}
+
+		&-text {
+			margin-left: 270px;
+			max-width: 660px;
+			width: 100%;
+			font-size: 20px;
+
+			@include mw1440 {
+				margin-left: 226px;
+			}
+			@include mw1024 {
+				margin-left: 0;
+			}
+			@include mw768 {
+				font-size: 14px;
+			}
+
+			p+p {
+				margin-top: 10px;
+			}
+
+			.btn--arrow {
+				margin-top: 35px;
+				@include mw768 {
+					margin-top: 25px;
+				}
+			}
+		}
+	}
+}

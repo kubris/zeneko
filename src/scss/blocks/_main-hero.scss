@@ -1,0 +1,105 @@
+// -- hero
+.main-hero {
+	display: flex;
+	background-color: var(--bg-green);
+
+
+	&__swiper {
+		width: 100%;
+	}
+	
+	.swiper-pagination-bullet {
+		background: var(--bg-murena);
+		height: 12px;
+		width: 12px;
+	}
+	.swiper-pagination-bullet-active {
+		background: var(--white);
+	}
+	.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+		bottom: 50px;
+		@include mw1024 {
+			bottom: 30px;
+		}
+		@include mw768 {
+			bottom: 20px;
+		}
+	}
+	.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+		margin: 0 10px;
+	}
+
+	&__item {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		color: var(--white);
+		height: 100%;
+		width: 100%;
+		@include mw1024 {
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__content {
+		margin-top: 200px;
+		margin-bottom: 340px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 60px;
+		width: 100%;
+		@include mw1440 {
+			margin-top: 160px;
+			margin-bottom: 220px;
+		}
+		@include mw1024 {
+			margin-top: 50px;
+			margin-bottom: 122px;
+			gap: 20px;
+		}
+		@include mw768 {
+			padding: 0 20px;
+			margin-top: 60px;
+			margin-bottom: 100px;
+		}
+		.h2 {
+			margin-bottom: 0;
+		}
+		.btn {
+			margin: 0 auto;
+			@include mw1024 {
+				margin: 20px auto 0;
+			}
+		}
+	}
+
+	&__sub {
+		max-width: 447px;
+		font-size: 20px;
+		@include mw768 {
+			font-size: 14px;
+		}
+	}
+
+	// ===
+	&__img {
+		width: 100%;		
+		@include mw1024 {
+			width: 100%;
+			height: 472px;
+		}
+		@include mw768 {
+			height: 220px;
+		}
+		
+		img {
+			height: 100%;
+			object-fit: cover;
+
+			@include mw1024 {
+				width: 100%;
+			}
+		}
+	}
+}

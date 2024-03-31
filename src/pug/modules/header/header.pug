@@ -1,0 +1,32 @@
+header.header-main
+	.container
+		.navbar
+			button(class="navbar-toggler jsBurger")
+				span
+			
+			div(class="navbar-socials d-md-none")
+				a(class="navbar-socials__link text--btn-title-adp accent-color")
+					+mono-svg('tlg', 'navbar-socials__icon')
+					span Telegram
+				a(class="navbar-socials__link text--btn-title-adp accent-color")
+					+mono-svg('whs', 'navbar-socials__icon')
+					span Whatsapp
+				span.navbar-socials__text
+					| Написать нам
+			
+			a.navbar-logo(href="/")
+				| ЗенЭко
+			
+			button(class="navbar-call text--btn-title d-md-none jsOpenModal")
+				+mono-svg('tel', 'navbar-call-icon')
+				| Заказать звонок
+			
+			.navbar-btns
+				button.fx-center.jsSearchTop
+					+mono-svg('loupe', 'navbar-btns-icon')
+				button.navbar-btns__fav
+					+mono-svg('heart', 'navbar-btns-icon i-heart')
+					i.fill 0
+				button.navbar-btns__cart
+					+mono-svg('bag', 'navbar-btns-icon')
+					i.fill 0

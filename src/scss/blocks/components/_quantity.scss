@@ -1,0 +1,19 @@
+//- quantity counter input
+.quantity {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	height: 55px;
+	width: 100%;
+	background-color: var(--light-gray);
+
+	.result {
+		width: 50px;
+		text-align: center;
+		font-size: 28px;
+		line-height: 120%;
+		font-weight: bold;
+		color: var(--accent);
+	}
+}

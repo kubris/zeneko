@@ -1,0 +1,63 @@
+aside.aside__menu
+	button.aside__menu-close
+		+mono-svg('close', 'aside-close', '0 0 30 30')
+	ul.aside__menu-list
+		li.drop
+			a.aside__menu-link(href='#')
+				| Каталог
+			ul.aside__submenu
+				li
+					a(href='#') Все категории
+				li
+					a(href='#') Товары для загородного дома
+				li
+					a(href='#') Детское игровое и спортивное оборудование
+				li
+					a(href='#') Зона барбекю
+				li
+					a(href='#') Изделия для сада, огорода
+				li
+					a(href='#') Уличные светильники
+				li
+					a(href='#') Декоративные изделия из металла
+				li
+					a(href='#') Мобильные киоски либо павильоны
+				li
+					a(href='#') Прочие металоконструкции
+				li
+					a(href='#') Дома на колёсах
+				li
+					a(href='#') Мобильные малогабаритные сооружения
+				li
+					a(href='#') Изделия на светодиодном оборудование
+				li
+					a(href='#') Емкости для растений
+				li
+					a(href='#') Декоративные и функциональные изделия из древесины и пластмассы
+				li
+					a(href='#') Щиты, светильники, билборды
+		li
+			a.aside__menu-link(href='#')
+				| О Компании
+		li
+			a.aside__menu-link(href='#')
+				| Контакты
+		li
+			a.aside__menu-link(href='#')
+				| Центр поддержки
+		li
+			a.aside__menu-link(href='#')
+				| Блог
+	ul.aside__menu-list.aside__menu-socials
+		li
+			button(class="aside__menu-link jsOpenModal")
+				+mono-svg('tel', 'aside__menu-icon')
+				| Заказать звонок
+		li
+			a.aside__menu-link(href='#')
+				+mono-svg('whs', 'aside__menu-icon')
+				| Whatsapp
+		li
+			a.aside__menu-link(href='#')
+				+mono-svg('tlg', 'aside__menu-icon')
+				| Telegram

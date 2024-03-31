@@ -1,0 +1,94 @@
+//- search-top
+.search-top {
+	position: fixed;
+	z-index: 1000;
+	top: -110%;
+	left: 0;
+	right: 0;
+	height: 128px;
+	background-color: var(--white);
+	transition: top 0.3s ease-out;
+	box-shadow: 0 0 6px var(--text-gray);
+	overflow: hidden;
+	@include mw1024 {
+		height: 84px;
+	}
+	@include mw768 {
+		height: 68px;
+	}
+	&.show {
+		top: 0;
+	}
+
+	&__block {
+		padding-left: 60px;
+		width: 100%;
+		@include mw1024 {
+			padding: 0 54px;
+		}
+		@include mw768 {
+			padding: 0 22px;
+		}
+	}
+
+	&__close {
+		width: 28px;
+		height: 28px;
+		@include mw1024 {
+			width: 18px;
+			height: 18px;
+		}
+		@include mw768 {
+			display: inline-flex;
+			align-items: center;
+		}
+
+		&>svg {
+			fill: var(--text-gray);
+			transition: fill 0.2s ease-out;
+		}
+		&:hover {
+			&>svg {
+				fill: var(--dark);
+			}
+		}
+		&:active {
+			transform: scale(0.9);
+		}
+	}
+
+	&__icon {
+		width: 28px;
+		height: 28px;
+		fill: var(--text-gray);
+		@include mw1024 {
+			height: 20px;
+			width: 20px;
+		}
+	}
+
+	&__form {
+		margin-right: 60px;
+		padding: 5px 22px;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		border: 1px solid var(--text-gray);
+		max-width: 660px;
+		width: 100%;
+		height: 68px;
+		@include mw1024 {
+			margin-right: 30px;
+			padding: 5px 0;
+			max-width: unset;
+			height: auto;
+			border: unset;
+		}
+		@include mw768 {
+			margin-right: 15px;
+		}
+	}
+	&__input {
+		width: 100%;
+	}
+}

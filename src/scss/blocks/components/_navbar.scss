@@ -1,0 +1,121 @@
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@include mw768 {flex-wrap: wrap}
+
+	&-toggler {
+		position: relative;
+		z-index: 5;
+	}
+
+	&-socials {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		text-transform: uppercase;
+
+		&__icon {
+			width: 24px;
+			height: 24px;
+			fill: var(--accent);
+		}
+
+		&__link {
+			display: flex;
+			align-items: center;
+			text-transform: uppercase;
+
+			span {
+				display: none;
+			}
+		}
+
+		span {
+			font-family: var(--font-head);
+		}
+	}
+
+	&-logo {
+		font-family: var(--font-head);
+		font-size: 40px;
+		color: var(--accent);
+
+		@include mw1024 {
+			font-size: 32px
+		}
+
+		@include mw768 {
+			font-size: 22px
+		}
+	}
+
+	&-call {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		text-transform: uppercase;
+
+		svg {
+			width: 18px;
+			height: 18px;
+			fill: var(--accent);
+		}
+	}
+
+	&-btns {
+		position: relative;
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		padding-left: 42px;
+		color: var(--accent);
+		@include mw1024 {
+			padding-left: 32px;
+		}
+
+		&__fav,
+		&__cart {
+			display: flex;
+			position: relative;
+			z-index: 1;
+
+			i {
+				position: absolute;
+				z-index: 2;
+				right: -5px;
+				bottom: -2px;
+
+				display: none;
+				align-items: center;
+				justify-content: center;
+				width: 14px;
+				height: 14px;
+				border-radius: 50%;
+				background-color: var(--bg-green);
+				color: var(--white);
+				font-size: 8px;
+				font-style: normal;
+
+				@include mw1024 {
+					right: -7px;
+					bottom: -3px;
+				}
+
+				&.fill {
+					display: flex;
+				}
+			}
+		}
+
+		&-icon {
+			width: 22px;
+			height: 22px;
+
+			@include mw1024 {
+				width: 18px;
+				height: 18px;
+			}
+		}
+	}
+}
