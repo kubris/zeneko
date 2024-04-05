@@ -29,6 +29,20 @@
 			span {
 				display: none;
 			}
+			span.navbar-socials__text {
+				display: inline-block;
+				margin-left: 10px;
+				line-height: normal;
+			}
+
+			&:hover {
+				.navbar-socials__icon {
+					fill: var(--text-gray);
+				}
+				span {
+					color: var(--text-gray);
+				}
+			}
 		}
 
 		span {
@@ -55,11 +69,19 @@
 		align-items: center;
 		gap: 10px;
 		text-transform: uppercase;
-
+		color: var(--accent);
+		transition: color 0.2s ease-out;
 		svg {
 			width: 18px;
 			height: 18px;
 			fill: var(--accent);
+			transition: fill 0.2s ease-out;
+		}
+		&:hover {
+			color: var(--text-gray);
+			svg {
+				fill: var(--text-grayh);
+			}
 		}
 	}
 

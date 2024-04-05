@@ -1,5 +1,5 @@
 :root {
-	--container-width: 1600px;
+	--container-width: 1700px;
 	--container-padding: 50px;
 
 	--bg-green: #1F4634;
@@ -20,12 +20,8 @@
 	--font-head: "New York Extra Large", serif;
 }
 @media (max-width: 1024px) {
-	:root {
-		--container-padding: 54px;
-	}
+	:root {--container-padding: 54px}
 }
 @media (max-width: 767px) {
-	:root {
-		--container-padding: 20px;
-	}
+	:root {--container-padding: 20px}
 }

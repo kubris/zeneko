@@ -155,7 +155,7 @@
 				background-color: var(--gray);
 			}
 
-			&.on {
+			&.active {
 				&>i {
 					background-color: var(--accent);
 				}
@@ -201,6 +201,13 @@
 
 					.goods-popular__hover {
 						height: calc(100% + 75px);
+					}
+				}
+			}
+			&:first-child:hover {
+				.goods-popular__grid-wrapper {
+					&::after {
+						box-shadow: unset;
 					}
 				}
 			}

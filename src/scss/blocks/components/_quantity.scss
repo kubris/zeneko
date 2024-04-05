@@ -15,5 +15,8 @@
 		line-height: 120%;
 		font-weight: bold;
 		color: var(--accent);
+		@include mw768 {
+			font-size: 22px;
+		}
 	}
 }

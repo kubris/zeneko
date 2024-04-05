@@ -12,7 +12,7 @@
 		overflow: hidden;
 		transition: 0.2s ease-out;
 	}
-
+	
 	&-swiper {
 		padding: 0 15px 100px;
 		overflow: hidden;
@@ -107,11 +107,15 @@
 		&-img {
 			img {
 				max-width: 650px;
+				height: 400px;
 				width: 100%;
 				object-fit: cover;
-
-				@include mw1024 {
-					aspect-ratio: 414/439;
+				@include mw1440 {
+					height: 340px;
+				}
+				@include mw768 {
+					aspect-ratio: 152/162;
+					height: auto;
 				}
 			}
 		}
@@ -258,5 +262,37 @@
 
 	&-btn {
 		margin-top: -40px;
+	}
+
+	&-links {
+		display: flex;
+		gap: 20px;
+		margin: -10px 0 20px;
+		@include mw1024 {
+			align-items: flex-start;
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+		@include mw768 {
+			margin: 0 0 20px;			
+		}
+		& > li {
+			& > a {
+				display: inline-block;
+				padding: 12px 10px;
+				border: 1px solid var(--gray);
+				color: var(--accent);
+				font-weight: 600;
+				border-radius: 2px;
+				transition: background-color 0.2s ease-out, color 0.2s ease-out;
+				@include mw768 {border: 1px solid var(--accent)}
+				&:hover {
+					background-color: var(--accent);
+					color: var(--white);
+					border: 1px solid var(--accent);
+				}
+				
+			}
+		}
 	}
 }

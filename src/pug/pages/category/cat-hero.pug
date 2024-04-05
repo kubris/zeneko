@@ -1,0 +1,21 @@
+//- category hero
+section.category-hero.offset
+	.container-right
+		+breadcrumb(['Главная'], 
+			'Категории', 
+			'category-hero__breadcrumbs',
+			['/', 'category.html'])
+		.category-hero__block
+			.category-hero__content
+				.hero-content
+					.hero-content__title Стиль, экологичность <br>и функциональность в каждом проекте
+					p.hero-content__text Компания ЗенЭко предлагает широкий спектр услуг по созданию стильного и функционального ландшафтного дизайна, обустройству общественных пространств и декорированию.
+					a(class="btn btn--arrow arrow--filled" href="#") В каталог
+						+mono-svg('btn-arrow', 'btn--arrow-icon', '0 0 196 20')
+
+			.category-hero__img
+				picture
+					source(media="(max-width: 1024px)" srcset="uploads/hero/hero-category-sm.jpg")
+					source(media="(min-width: 1025px)" srcset="uploads/hero/hero-category-lg.jpg")
+					img(src="uploads/hero/hero-category-sm.jpg" alt="")
+

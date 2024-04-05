@@ -11,7 +11,7 @@ gulp.task('default',
 	gulp.parallel('pug:dev', 'sass:dev', 
 	'images:dev', 'imagesWebp:dev', 
 	'uploads:dev', 'uploadsWebp:dev',
-	'svgSprite:dev', 'svgSpriteMulti:dev',
+	'svgSprite:dev', 'svgSpriteMulti:dev', 'svg:dev',
 	'fonts:dev', 'js:dev', 'root:dev'),
 	gulp.parallel('server:dev', 'watch:dev')
 ));

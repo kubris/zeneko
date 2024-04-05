@@ -4,15 +4,15 @@
 
 .v-hidden {
 	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px !important;
 	border: 0;
-	padding: 0;
+	padding: 0 !important;
 	white-space: nowrap;
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
-	overflow: hidden;
+	overflow: hidden !important;
 }
 
 .no-scroll {
@@ -74,6 +74,7 @@
 	justify-content: center;
 }
 .aic {align-items: center}
+.aib {align-items: baseline}
 .tt-uc {text-transform: uppercase}
 .tac {text-align: center}
 
@@ -95,9 +96,12 @@
 	transition: opacity 0.25s ease-out;
 	pointer-events: none;
 	opacity: 0;
+	pointer-events: none;
 
 	&.show {
 		opacity: 1;
+		pointer-events: auto;
+		z-index: 99;
 	}
 }
 

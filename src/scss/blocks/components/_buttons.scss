@@ -55,7 +55,8 @@
 		text-transform: uppercase;
 		font-family: var(--font-head);
 		color: var(--accent);
-		transition: color 0.2s ease-out;
+		transition: color 0.2s ease-out;		
+
 		&-icon {
 			width: 196px;
 			height: 20px;
@@ -83,6 +84,17 @@
 				color: var(--white);
 				background-color: var(--bg-green);
 				border: 1px solid var(--bg-green);
+			}
+
+			&.arrow--filled {
+				color: var(--white);
+				background-color: var(--bg-green);
+				transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+
+				&:hover {
+					background-color: var(--bg-murena);
+					border: 1px solid var(--bg-murena);
+				}
 			}
 		}
 	}

@@ -23,7 +23,7 @@
 				font-size: 36px;
 				max-width: 660px;
 			}
-			@include mw1024 {
+			@include mw768 {
 				font-size: 18px;
 				font-weight: 500;
 			}

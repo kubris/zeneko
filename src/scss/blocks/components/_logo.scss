@@ -4,4 +4,11 @@
 	font-size: 1.5em;
 	font-weight: 600;
 	text-transform: uppercase;
+
+	&-footer {
+		font-size: 32px;
+		font-family: var(--font-head);
+		font-weight: 500;
+		color: var(--white);
+	}
 }

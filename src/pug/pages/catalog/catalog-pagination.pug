@@ -1,0 +1,18 @@
+//- Catalog pagination
+.catalog__pagination
+	.pagination
+		button.pagination-prev.disable
+			+mono-svg('pag-arrow', '', '0 0 70 24')
+		ul.pagination-list
+			li.active
+				a(href="#1") 1
+			li
+				a(href="#2") 2
+			li
+				a(href="#3") 3
+			li
+				a(href="#4") 4
+			li
+				a(href="#5") 5
+		button.pagination-next
+			+mono-svg('pag-arrow', '', '0 0 70 24')

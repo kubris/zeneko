@@ -22,7 +22,7 @@ mixin multi-img(name, cls, alt)
 	//- end svg sprite
 
 //- start quantity 
-//- поле карточки, всплывающее после добавления товара в корзину - можно указть кол-во товара
+//- input для указания кол-во товара - в карточке, после нажатия кнопки "В корзину"
 mixin quantity(minGoods)
 	- minGoods = minGoods || '1'
 	.quantity.jsQ.none
@@ -32,3 +32,33 @@ mixin quantity(minGoods)
 		button.plus(type='button')
 			span.pls
 //- end quantity
+
+//- start breadcrumbs
+//- items:крошки с сылками; last: последняя крошка, cls: доп.класс к блоку обёртке, links: ссылки на страницы по порядку, вместе с последней
+mixin breadcrumb(items, last, cls, links)
+	- cls= cls || '' 
+	div(class="breadcrumbs" + ' ' + cls)
+		- let i = 0;
+		ul&attributes({
+			'itemscope':'', 
+			'itemtype':'https://schema.org/BreadcrumbList'})
+			each item in items
+				li&attributes({
+				'itemprop':'itemListElement',
+				'itemscope':'',
+				'itemtype':'https://schema.org/ListItem'
+				})
+					if (item.length === 1)
+						span.breadcrumb__link= item
+						meta(itemprop='position' content=i++)
+					else
+						a(href="" + links[i], title=item, itemprop='item')
+							span= item
+							meta(itemprop='position' content=i++)
+
+			if last
+				li
+					a(href='' + links[i], title=item, itemprop='item')
+						span= last
+						meta(itemprop='position' content=i)
+//- end breadcrumbs

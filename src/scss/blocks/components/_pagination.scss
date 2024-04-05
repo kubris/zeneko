@@ -1,0 +1,47 @@
+.pagination {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+
+	button {
+		display: inline-flex;
+		align-items: center;
+		
+		svg {
+			width: 30px;
+			height: 18px;
+			fill: var(--accent);
+		}
+
+		&.disable {
+			svg {
+				fill: var(--gray);
+			}
+		}
+	}
+
+	&-prev {
+		svg {
+			transform: rotate(180deg);
+		}
+	}
+
+	&-list {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+
+		&>li {
+			a {
+				color: var(--gray);
+			}
+
+			&.active {
+				a {
+					color: var(--accent);
+				}
+			}
+		}
+	}
+
+}

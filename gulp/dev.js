@@ -155,6 +155,13 @@ gulp.task('svgSpriteMulti:dev', function(){
 });
 // === stop SVG SPRITE ===
 
+// === start SVG ===
+gulp.task('svg:dev', function(){
+	return gulp.src('./src/images/svg/**/*.svg')
+		.pipe(gulp.dest('./build/images/svg/'))
+});
+// === stop SVG ===
+
 // === start FONTS ===
 gulp.task('fonts:dev', function(){
 	return gulp.src('./src/fonts/**/*')
@@ -194,6 +201,7 @@ gulp.task('watch:dev', function(){
 	gulp.watch('./src/scss/**/*.scss', gulp.parallel('sass:dev'));
 	gulp.watch('./src/js/**/*.js', gulp.parallel('js:dev'));
 	gulp.watch('./src/fonts/**/*', gulp.parallel('fonts:dev'));
+	gulp.watch('./src/images/svg/**/*', gulp.parallel('svg:dev'));
 	gulp.watch('./src/images/sprite/svg/**/*', gulp.parallel('svgSprite:dev', 'svgSpriteMulti:dev'));
 	gulp.watch('./src/images/**/*.+(jpg|jpeg|png)', gulp.parallel('images:dev', 'imagesWebp:dev'));
 	gulp.watch('./src/uploads/**/*.+(jpg|jpeg|png)', gulp.parallel('uploads:dev', 'uploadsWebp:dev'));

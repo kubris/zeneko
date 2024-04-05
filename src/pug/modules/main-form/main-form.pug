@@ -1,0 +1,26 @@
+//- start main-fprm
+section(class="main-form offset")
+	.s-form
+		.s-form__img
+			img(src="images/form-l.jpg" alt="")
+		.s-form__block
+			.title-block
+				.h2.accent-color Ваши идеи заслуживают воплощения — напишите нам
+				.text--sub14 Оставьте контактные данные и наши сотрудники свяжутся с Вами
+			form.form
+				label
+					input(type="text" placeholder="Имя")
+				label
+					input(type="text" placeholder="Телефон")
+				label.accept-privacy
+					input(class="v-hidden" type="checkbox" name="userAccept")
+					span(class="accept")
+						| Я согласен с 
+						a(href="#") политикой обработки персональных данных
+				button(class="btn btn--accent btn--xl" type="submit") Отправить
+		.s-form__img
+			img(src="images/form-m.jpg" alt="")
+		.s-form__img
+			img(src="images/form-r.jpg" alt="")
+
+//- end main-form

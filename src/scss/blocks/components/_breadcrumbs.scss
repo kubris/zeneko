@@ -13,12 +13,20 @@
 		li {
 			display: flex;
 			gap: 10px;
-			color: var(--white);
+			color: var(--text-gray);
 			white-space: nowrap;
-			@include mw768 {font-size: 16px}
+			@include mw768 {font-size: 14px}
 
-			&:not(:last-child)::after {
-				content: "/";
+			&:not(:last-child) {
+				a {
+					transition: color 0.2s ease-out;
+					&:hover {
+						color: var(--accent);
+					}
+				}
+				&::after {
+					content: "/";
+				}
 			}
 
 			&:last-child {
@@ -26,12 +34,8 @@
 					white-space: nowrap;
 					color: var(--accent);
 					pointer-events: none;
-					-webkit-touch-callout: none;
-					-webkit-user-select: none;
-					-khtml-user-select: none;
-					-moz-user-select: none;
-					-ms-user-select: none;
 					user-select: none;
+					cursor:context-menu;
 				}
 			}
 		}
@@ -40,7 +44,7 @@
 	&.breadcrumbs--dark {
 		ul {
 			li {
-				color: var(--gray600);
+				color: var(--text-gray);
 			}
 		}
 	}

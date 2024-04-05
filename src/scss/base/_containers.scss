@@ -8,16 +8,17 @@
 .container-fluid {
 	margin: 0 auto;
 	max-width: 1920px;
-	width: 100%;
 }
 
 .container-right {
-	//overflow-x: hidden;
-	margin-left: auto;
-	margin-left: calc((100vw - var(--container-width)) / 2 + var(--container-padding));
+	margin-left: calc((100vw - var(--container-width)) / 2);
+}
+@media (max-width: 1700px) {
+	.container-right {
+		margin-left: var(--container-padding);
+	}
 }
 
 .container-left {
-	// overflow-x: hidden;
 	padding-right: calc((100vw - var(--container-width)) / 2 + var(--container-padding));
 }

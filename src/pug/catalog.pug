@@ -1,0 +1,16 @@
+extends layout/main 
+
+block variables
+	-var title = 'Каталог'
+
+block content
+	section.catalog.offset
+		.container
+			include pages/catalog/catalog-breadcrumbs
+			include pages/catalog/catalog-title
+			include pages/catalog/catalog-filter
+			include pages/catalog/catalog-grid
+			include pages/catalog/catalog-pagination
+
+	include modules/main-form/main-form
+	

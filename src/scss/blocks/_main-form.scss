@@ -1,0 +1,158 @@
+// -- main-form
+.main-form {
+	.title-block {
+		flex-direction: column;
+		margin-bottom: 25px;
+
+		@include mw768 {
+			margin-bottom: 10px
+		}
+
+		.h2 {
+			margin-bottom: 5px;
+
+			@include mw768 {
+				letter-spacing: -0.8px;
+			}
+		}
+	}
+
+	.text--sub14 {
+		color: var(--text-gray);
+	}
+}
+
+
+.s-form {
+	display: grid;
+	grid-template-columns: 1.5fr 3.6fr 2.85fr 2.2fr;
+	grid-gap: 30px;
+
+	@include mw1440 {
+		grid-template-columns: 1fr 4.8fr 3.2fr 1fr;
+		gap: 20px;
+	}
+
+	@include mw1024 {
+		width: 100%;
+		grid-template-columns: 1fr;
+		padding: 0 54px;
+	}
+
+	@include mw768 {
+		padding: 0 20px;
+	}
+
+	&__img {
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		;
+
+		@include mw1024 {
+			display: none;
+		}
+	}
+
+	label {
+		display: flex;
+		flex-direction: column;
+
+		&>input {
+			padding: 23px 20px;
+			height: 65px;
+			width: 100%;
+			font-size: 18px;
+			transition: box-shadow 0.2s;
+			background-color: var(--light-gray);
+
+			@include mw768 {
+				height: 60px;
+				font-size: 14px;
+			}
+
+			&:hover {
+				box-shadow: 0 0 6px #aaa;
+			}
+		}
+
+		&+label {
+			margin-top: 30px;
+
+			@include mw768 {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	label>input {
+		color: var(--dark);
+	}
+
+	label>input::placeholder {
+		color: var(--dark);
+		text-transform: uppercase;
+		font-size: 14px;
+	}
+
+	.accept-privacy {
+		margin: 20px 0 30px;
+
+		@include mw768 {
+			margin: 15px 0 20px
+		}
+	}
+
+	.accept {
+		position: relative;
+		padding-left: 28px;
+		font-size: 14px;
+		text-transform: uppercase;
+		color: var(--text-gray);
+
+		@include mw768 {
+			font-size: 12px
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: flex;
+			width: 16px;
+			height: 16px;
+			border-radius: 2px;
+			border: 1px solid var(--text-gray);
+			transition: box-shadow 0.2s;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 3px;
+			top: 3px;
+			display: flex;
+			width: 10px;
+			height: 10px;
+			background: url(../images/svg/check.svg) center no-repeat;
+			opacity: 0;
+		}
+
+		&:hover::before,
+		&:focus::before {
+			box-shadow: 0 0 5px var(--dark-gray);
+		}
+
+		&>a {
+			text-decoration: underline;
+		}
+	}
+
+	input[type=checkbox]:checked+.accept::after {
+		opacity: 1;
+	}
+}
