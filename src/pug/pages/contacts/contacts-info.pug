@@ -1,0 +1,37 @@
+section.contacts-info.offset
+	.container
+		.contacts-info__block
+			.contacts-info__block-content
+				include contacts-breadcrumbs
+				.contacts-info__grid
+					.contacts-info__grid-item
+						.contacts-info__grid-title Контакты
+						.contacts-info__grid-block
+							a(href="tel:+78127481001") +7 (812) 7481001
+							a(href="mailto:info@sppi.ooo") info@sppi.ooo
+
+					.contacts-info__grid-item
+						.contacts-info__grid-title Адрес
+						.contacts-info__grid-block
+							p Санкт-Петербург, <br>г Колпино,Тверская ул, д. 36 к. 3
+					.contacts-info__grid-item
+						.contacts-info__grid-title Реквизиты
+						.contacts-info__grid-block
+							p ООО «ЗенЭко» <br>ИНН 7817120160 <br>КПП 781701001 <br>Юридический адрес: 196655, <br>г. Санкт-Петербург, г Колпино, <br>Тверская ул, д. 36  к. 3
+
+					.contacts-info__grid-item
+						.contacts-info__grid-title Написать в чат
+						.contacts-info__grid-block.c-icons
+							a(class="text--btn-title-adp accent-color" href="#")
+								+mono-svg('tlg', 'contacts-info__icon')
+								span Telegram
+							a(class="text--btn-title-adp accent-color" href="#")
+								+mono-svg('whs', 'contacts-info__icon')
+								span Whatsapp
+
+			.contacts-info__block-img
+				picture
+					source(media="(max-width: 767px)" srcset="images/contacts-bl.jpg")
+					source(media="(max-width: 1024px)" srcset="images/contacts-sq.jpg")
+					source(media="(max-width: 1440px)" srcset="images/contacts-bl.jpg")
+					img(src="images/contacts-sq.jpg" alt="")

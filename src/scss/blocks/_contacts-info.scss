@@ -1,0 +1,110 @@
+// -- contacts-info
+.contacts-info {
+
+	&__block {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-auto-rows: auto;
+		grid-gap: 30px;
+		@include mw1024 {
+			grid-template-columns: 1fr;
+			grid-gap: 60px;
+		}
+		@include mw768 {
+			grid-gap: 50px;
+		}
+
+		&-img {
+			text-align: right;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				@include mw1440 {
+					height: auto;
+					width: auto;
+					aspect-ratio: 597 / 660;
+				}
+				@include mw1024 {
+					aspect-ratio: 660 / 660;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&__grid {
+
+		&-item {
+			padding: 20px 0;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 30px;
+			border-bottom: 1px solid var(--gray);
+			&:first-child {
+				border-top: 1px solid var(--gray);
+			}
+
+			@include mw768 {
+				padding: 30px 0;
+				grid-template-columns: 1fr;
+				grid-gap: 15px;
+			}
+		}
+
+		&-title {
+			display: flex;
+			align-items: center;
+			font-size: 26px;
+			font-weight: 500;
+			line-height: 120%;
+			color: var(--accent);
+		}
+
+		&-block {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+			font-size: 20px;
+			@include mw768 {
+				gap: 10px;
+			}
+		}
+	}
+
+	&__breadcrumbs {
+		margin-bottom: 109px;
+		@include mw1440 {
+			margin-bottom: 69px;
+		}
+		@include mw1024 {
+			margin-bottom: 49px;
+		}
+		@include mw768 {
+			margin-bottom: 33px;
+		}
+	}
+
+	.c-icons {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		& span {
+			text-transform: uppercase;
+			font-size: 20px;
+			line-height: 1;
+			color: var(--accent);
+		}
+		&>a {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+	}
+	&__icon {
+		height: 26px;
+		width: 26px;
+		text-align: right;
+		fill: var(--accent)
+	}
+}
