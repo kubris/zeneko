@@ -1,0 +1,38 @@
+section.product-goods.offset
+	.container
+		include product-breadcrumbs
+
+		.product-goods__grid.pg-grid
+			.pg-grid__gal
+				.pg-grid__gal-img
+					.goods-popular__grid-top
+						.goods-popular__grid-discount 0%
+						button(class="goods-popular__grid-fav jsFav")
+							+mono-svg('heart', '', '0 0 20 18')
+					a(class="goods-popular__grid-img" data-fslightbox="prod-id" href="uploads/products/lamp-main.jpg")
+						img(src="uploads/products/lamp-main.jpg", alt="")
+				a(class="pg-grid__gal-img" data-fslightbox="prod-id" href="uploads/products/lamp-sub-1.jpg")
+					img(src="uploads/products/lamp-sub-1.jpg", alt="")
+				a(class="pg-grid__gal-img" data-fslightbox="prod-id" href="uploads/products/lamp-sub-2.jpg")
+					img(src="uploads/products/lamp-sub-2.jpg", alt="")
+				a(class="pg-grid__gal-img" data-fslightbox="prod-id" href="uploads/products/lamp-sub-3.jpg")
+					img(src="uploads/products/lamp-sub-3.jpg", alt="")
+			.pg-content
+				.pg-content__title.h2 Абстрактная настольная лампа из витражного стекла 
+				.pg-content__price 12 400 ₽
+				.pg-content__desc
+					p Абстрактная настольная лампа из витражного стекла - это уникальное и стильное решение для освещения вашего интерьера. Этот продукт представляет собой сочетание элегантности и современных технологий, создавая мягкое и уютное освещение. Витражное стекло, из которого изготовлена лампа, придает ей неповторимый и изысканный вид. Благодаря своей компактной и легкой конструкции, лампа станет отличным дополнением для любого интерьера, будь то домашний кабинет, спальня или даже офис.
+					p В качестве источника света используется энергосберегающая светодиодная лампа, которая обеспечивает мягкий и равномерный свет. Вы можете выбрать цветовую температуру и яркость освещения в соответствии с вашими предпочтениями. Также вы можете легко регулировать высоту и направление света, чтобы создать комфортное освещение для чтения, работы или отдыха.
+				.goods-popular__grid-info
+					.goods-popular__grid-status.active
+						i
+						| Под заказ
+					.goods-popular__grid-amount Мин. заказ: от&nbsp;
+						span 10
+						| &nbsp;шт.
+
+				+quantity-shown(10)
+
+				.pg-content__btns
+					button.btn.btn--accent.btn--xl Добавить в корзину
+					button.btn.btn--transp.btn--xl Связаться с менеджером
