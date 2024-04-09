@@ -6,6 +6,18 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .h1 {	font-size: 58px; }
+.h1-adp {
+	font-size: 58px;
+	line-height: 100%;
+	font-family: var(--font-head);
+	@include mw1440 {
+		font-size: 46px;
+		line-height: 110%;
+	}
+	@include mw768 {
+		font-size: 24px;
+	}
+}
 .h2 {
 	margin-bottom: 30px;
 	font-size: 46px; 
