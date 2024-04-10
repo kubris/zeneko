@@ -46,7 +46,7 @@
 	position: relative;
 	white-space: nowrap;
 	align-self: flex-start;
-	transition: background-color 0.2s ease-out, color 0.2s ease-out;
+	transition: color 0.2s ease-out;
 	&:hover {
 		color: var(--text-gray);
 		&::after {
@@ -61,6 +61,7 @@
 		bottom: 0;
 		height: 1px;
 		background-color: var(--accent);
+		transition: background-color 0.2s ease-out;
 	}
 }
 

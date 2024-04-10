@@ -1,0 +1,315 @@
+section(class="blog-posts offset")
+	.container
+		.title-block
+			.h2.accent-color Темы и статьи
+			form.blog-posts__form
+				+mono-svg('loupe', 'blog-posts__form-icon')
+				input( class="blog-posts__form-field" type="text" placeholder="Поиск статьи")
+
+	.blog-posts__rubrik
+		.container
+			.rubrik-block
+				.rubrik-title Эко-дом: тренды, стиль и декор
+				a(class="rubrik-link un-line" href="#") Читать все				
+		.blog-posts__roll
+			.container-right
+				ul.jsCatList.categories-list
+					li.categories-item.thb.active(data-btn='one')
+						button.accent-hover Эко-стиль в интерьере
+					li.categories-item.thb(data-btn='two')
+						button.accent-hover Интерьерные тренды
+					li.categories-item.thb(data-btn='three')
+						button.accent-hover Эко-дизайн
+					li.categories-item.thb(data-btn='four')
+						button.accent-hover Домашний декор
+					li.categories-item.thb(data-btn='five')
+						button.accent-hover Организация пространства
+		.container
+			.rubrik__slider
+				.rubrik__grid.swiper-wrapper
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-1.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 01.01.2024
+							span.rubrik__grid-caption Современные эко-тренды в интерьере
+							p.rubrik__grid-text В современном мире все больше людей задумываются об экологии и устойчивом развитии. Это отражается и на трендах в дизайне интерьера, где все большую популярность приобретают “зеленые” решения.
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-2.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 02.01.2024
+							span.rubrik__grid-caption Использование растений в интерьере
+							p.rubrik__grid-text Один из самых популярных эко-трендов – это использование растений в дизайне помещений. В этой статье мы расскажем о том, как правильно выбрать и разместить растения, чтобы создать уютный и гармоничный интерьер.
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-3.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 03.01.2024
+							span.rubrik__grid-caption Основные принципы и тенденции
+							p.rubrik__grid-text Все больше людей становятся приверженцами экологичного образа жизни. Это касается и обустройства дома, где одним из популярных направлений является эко-стиль. Мы рассмотрим основные принципы и тенденции этого стиля.
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-4.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 01.01.2024
+							span.rubrik__grid-caption Экологический подход к интерьеру
+							p.rubrik__grid-text Экологический дизайн – это направление, которое подразумевает использование экологически чистых и натуральных материалов, цветов и текстур. Мы рассмотрим основные принципы экологического дизайна.
+
+	.blog-posts__rubrik
+		.container
+			.rubrik-block
+				.rubrik-title Экология и сад
+				a(class="rubrik-link un-line" href="#") Читать все				
+		.blog-posts__roll
+			.container-right
+				ul.jsCatList.categories-list
+					li.categories-item.thb.active(data-btn='one')
+						button.accent-hover Экостиль в саду
+					li.categories-item.thb(data-btn='two')
+						button.accent-hover Зеленая архитектура: стены и крыши
+					li.categories-item.thb(data-btn='three')
+						button.accent-hover Садовые растения и уход за ними
+					li.categories-item.thb(data-btn='four')
+						button.accent-hover Создание садового декора
+					li.categories-item.thb(data-btn='five')
+						button.accent-hover Организация пространства
+					li.categories-item.thb(data-btn='six')
+						button.accent-hover Озеленение участка
+					li.categories-item.thb(data-btn='seven')
+						button.accent-hover Полезные советы для сада
+		.container
+			.rubrik__slider
+				.rubrik__grid.swiper-wrapper
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-1.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 01.01.2024
+							span.rubrik__grid-caption Современные эко-тренды в интерьере
+							p.rubrik__grid-text В современном мире все больше людей задумываются об экологии и устойчивом развитии. Это отражается и на трендах в дизайне интерьера, где все большую популярность приобретают “зеленые” решения.
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-4.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 01.01.2024
+							span.rubrik__grid-caption Экологический подход к интерьеру
+							p.rubrik__grid-text Экологический дизайн – это направление, которое подразумевает использование экологически чистых и натуральных материалов, цветов и текстур. Мы рассмотрим основные принципы экологического дизайна.
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-3.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 03.01.2024
+							span.rubrik__grid-caption Основные принципы и тенденции
+							p.rubrik__grid-text Все больше людей становятся приверженцами экологичного образа жизни. Это касается и обустройства дома, где одним из популярных направлений является эко-стиль. Мы рассмотрим основные принципы и тенденции этого стиля.
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-2.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 02.01.2024
+							span.rubrik__grid-caption Использование растений в интерьере
+							p.rubrik__grid-text Один из самых популярных эко-трендов – это использование растений в дизайне помещений. В этой статье мы расскажем о том, как правильно выбрать и разместить растения, чтобы создать уютный и гармоничный интерьер.
+	
+	.blog-posts__rubrik
+		.container
+			.rubrik-block
+				.rubrik-title Ландшафтный дизайн
+				a(class="rubrik-link un-line" href="#") Читать все				
+		.blog-posts__roll
+			.container-right
+				ul.jsCatList.categories-list
+					li.categories-item.thb.active(data-btn='one')
+						button.accent-hover Проекты и идеи
+					li.categories-item.thb(data-btn='two')
+						button.accent-hover Стили ландшафтного дизайна
+					li.categories-item.thb(data-btn='three')
+						button.accent-hover Благоустройство территории
+					li.categories-item.thb(data-btn='four')
+						button.accent-hover Малые архитектурные формы
+					li.categories-item.thb(data-btn='five')
+						button.accent-hover Вертикальное озеленение
+					li.categories-item.thb(data-btn='six')
+						button.accent-hover Зеленый оазис
+		.container
+			.rubrik__slider
+				.rubrik__grid.swiper-wrapper
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-2.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 02.01.2024
+							span.rubrik__grid-caption Использование растений в интерьере
+							p.rubrik__grid-text Один из самых популярных эко-трендов – это использование растений в дизайне помещений. В этой статье мы расскажем о том, как правильно выбрать и разместить растения, чтобы создать уютный и гармоничный интерьер.
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-1.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 01.01.2024
+							span.rubrik__grid-caption Современные эко-тренды в интерьере
+							p.rubrik__grid-text В современном мире все больше людей задумываются об экологии и устойчивом развитии. Это отражается и на трендах в дизайне интерьера, где все большую популярность приобретают “зеленые” решения.
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-4.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 01.01.2024
+							span.rubrik__grid-caption Экологический подход к интерьеру
+							p.rubrik__grid-text Экологический дизайн – это направление, которое подразумевает использование экологически чистых и натуральных материалов, цветов и текстур. Мы рассмотрим основные принципы экологического дизайна.
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-3.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 03.01.2024
+							span.rubrik__grid-caption Основные принципы и тенденции
+							p.rubrik__grid-text Все больше людей становятся приверженцами экологичного образа жизни. Это касается и обустройства дома, где одним из популярных направлений является эко-стиль. Мы рассмотрим основные принципы и тенденции этого стиля.
+					
+	.blog-posts__rubrik
+		.container
+			.rubrik-block
+				.rubrik-title Декор
+				a(class="rubrik-link un-line" href="#") Читать все				
+		.blog-posts__roll
+			.container-right
+				ul.jsCatList.categories-list
+					li.categories-item.thb.active(data-btn='one')
+						button.accent-hover Принципы декора в современном интерьере
+					li.categories-item.thb(data-btn='two')
+						button.accent-hover Материалы для декора: выбор и сочетание
+					li.categories-item.thb(data-btn='three')
+						button.accent-hover Современный и винтажный декор
+					li.categories-item.thb(data-btn='four')
+						button.accent-hover Растения и цветы в декоре интерьера
+					li.categories-item.thb(data-btn='five')
+						button.accent-hover Как создать уют на участке
+		.container
+			.rubrik__slider
+				.rubrik__grid.swiper-wrapper
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-4.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 01.01.2024
+							span.rubrik__grid-caption Экологический подход к интерьеру
+							p.rubrik__grid-text Экологический дизайн – это направление, которое подразумевает использование экологически чистых и натуральных материалов, цветов и текстур. Мы рассмотрим основные принципы экологического дизайна.
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-3.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 03.01.2024
+							span.rubrik__grid-caption Основные принципы и тенденции
+							p.rubrik__grid-text Все больше людей становятся приверженцами экологичного образа жизни. Это касается и обустройства дома, где одним из популярных направлений является эко-стиль. Мы рассмотрим основные принципы и тенденции этого стиля.
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-2.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 02.01.2024
+							span.rubrik__grid-caption Использование растений в интерьере
+							p.rubrik__grid-text Один из самых популярных эко-трендов – это использование растений в дизайне помещений. В этой статье мы расскажем о том, как правильно выбрать и разместить растения, чтобы создать уютный и гармоничный интерьер.
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-1.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 01.01.2024
+							span.rubrik__grid-caption Современные эко-тренды в интерьере
+							p.rubrik__grid-text В современном мире все больше людей задумываются об экологии и устойчивом развитии. Это отражается и на трендах в дизайне интерьера, где все большую популярность приобретают “зеленые” решения.
+					
+	.blog-posts__rubrik
+		.container
+			.rubrik-block
+				.rubrik-title Территория комфорта
+				a(class="rubrik-link un-line" href="#") Читать все				
+		.blog-posts__roll
+			.container-right
+				ul.jsCatList.categories-list
+					li.categories-item.thb.active(data-btn='one')
+						button.accent-hover Как организовать освещение участка
+					li.categories-item.thb(data-btn='two')
+						button.accent-hover Оригинальные решения для водоемов и фонтанов
+					li.categories-item.thb(data-btn='three')
+						button.accent-hover Мощение дорожек
+					li.categories-item.thb(data-btn='four')
+						button.accent-hover Создание зон отдыха
+					li.categories-item.thb(data-btn='five')
+						button.accent-hover Дизайн двора: идеи оформления
+		.container
+			.rubrik__slider
+				.rubrik__grid.swiper-wrapper
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-1.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 01.01.2024
+							span.rubrik__grid-caption Современные эко-тренды в интерьере
+							p.rubrik__grid-text В современном мире все больше людей задумываются об экологии и устойчивом развитии. Это отражается и на трендах в дизайне интерьера, где все большую популярность приобретают “зеленые” решения.
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-2.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 02.01.2024
+							span.rubrik__grid-caption Использование растений в интерьере
+							p.rubrik__grid-text Один из самых популярных эко-трендов – это использование растений в дизайне помещений. В этой статье мы расскажем о том, как правильно выбрать и разместить растения, чтобы создать уютный и гармоничный интерьер.
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-3.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 03.01.2024
+							span.rubrik__grid-caption Основные принципы и тенденции
+							p.rubrik__grid-text Все больше людей становятся приверженцами экологичного образа жизни. Это касается и обустройства дома, где одним из популярных направлений является эко-стиль. Мы рассмотрим основные принципы и тенденции этого стиля.
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-4.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 01.01.2024
+							span.rubrik__grid-caption Экологический подход к интерьеру
+							p.rubrik__grid-text Экологический дизайн – это направление, которое подразумевает использование экологически чистых и натуральных материалов, цветов и текстур. Мы рассмотрим основные принципы экологического дизайна.
+	
+	.blog-posts__rubrik
+		.container
+			.rubrik-block
+				.rubrik-title Светодизайн: Рекомендации по освещению
+				a(class="rubrik-link un-line" href="#") Читать все				
+		.blog-posts__roll
+			.container-right
+				ul.jsCatList.categories-list
+					li.categories-item.thb.active(data-btn='one')
+						button.accent-hover Общие принципы освещения
+					li.categories-item.thb(data-btn='two')
+						button.accent-hover Как выбрать освещение для дома
+					li.categories-item.thb(data-btn='three')
+						button.accent-hover Декоративное освещение
+					li.categories-item.thb(data-btn='four')
+						button.accent-hover Какие лампы лучше использовать
+					li.categories-item.thb(data-btn='five')
+						button.accent-hover Уличное освещение
+					li.categories-item.thb(data-btn='six')
+						button.accent-hover Уличное освещение
+		.container
+			.rubrik__slider
+				.rubrik__grid.swiper-wrapper
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-1.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 01.01.2024
+							span.rubrik__grid-caption Современные эко-тренды в интерьере
+							p.rubrik__grid-text В современном мире все больше людей задумываются об экологии и устойчивом развитии. Это отражается и на трендах в дизайне интерьера, где все большую популярность приобретают “зеленые” решения.
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-2.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 02.01.2024
+							span.rubrik__grid-caption Использование растений в интерьере
+							p.rubrik__grid-text Один из самых популярных эко-трендов – это использование растений в дизайне помещений. В этой статье мы расскажем о том, как правильно выбрать и разместить растения, чтобы создать уютный и гармоничный интерьер.
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-3.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 03.01.2024
+							span.rubrik__grid-caption Основные принципы и тенденции
+							p.rubrik__grid-text Все больше людей становятся приверженцами экологичного образа жизни. Это касается и обустройства дома, где одним из популярных направлений является эко-стиль. Мы рассмотрим основные принципы и тенденции этого стиля.
+					div(class="rubrik__grid-item swiper-slide" data-postlink="blog.html")
+						.rubrik__grid-img
+							img(src="uploads/blog/post-4.jpg", alt="")
+						.rubrik__grid-content
+							span.rubrik__grid-date 01.01.2024
+							span.rubrik__grid-caption Экологический подход к интерьеру
+							p.rubrik__grid-text Экологический дизайн – это направление, которое подразумевает использование экологически чистых и натуральных материалов, цветов и текстур. Мы рассмотрим основные принципы экологического дизайна.

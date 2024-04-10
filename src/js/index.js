@@ -166,7 +166,7 @@ if (document.querySelector(".main-hero__swiper")) {
 	});
 }
 // === end MAIN-HERO SLIDER
-// === start newest-swiperSLIDER
+// === start NEWEST-SWIPER SLIDER
 if (document.querySelector(".n-slider")) {
 	const ySlider = new Swiper(".n-slider", {
 		slidesPerView: 2,
@@ -196,7 +196,51 @@ if (document.querySelector(".n-slider")) {
 		}
 	});
 }
-// === end SLIDER
+// === end NEWEST-SWIPER SLIDER
+// === start POST SLIDER
+if (document.querySelector(".rubrik__slider")) {
+
+	const allPostSliders = document.querySelectorAll(".rubrik__slider");
+	allPostSliders.forEach((slider) => {
+		const postSlider = new Swiper(slider, {
+			slidesPerView: "auto",
+			slidesPerView: 1,
+			spaceBetween: 20,
+			freemode: true,
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 20
+				},
+				361: {
+					slidesPerView: 1.2,
+					spaceBetween: 10
+				},
+				575: {
+					slidesPerView: 2,
+					spaceBetween: 10
+				},
+				768: {
+					slidesPerView: 2.5,
+					spaceBetween: 20
+				},
+				1025: {
+					slidesPerView: 3,
+					spaceBetween: 20
+				},
+				1200: {
+					slidesPerView: 3.5,
+					spaceBetween: 20
+				},
+				1441: {
+					spaceBetween: 30,
+					slidesPerView: 4
+				}
+			}
+		});
+	});
+}
+// === end POST-SWIPER SLIDER
 
 // === start CAT-SLIDER
 if (document.querySelector(".cat-slider")) {
@@ -348,6 +392,25 @@ if (document.querySelector("[data-postlink]")) {
 }
 // === end RELOCATE BY CLICK
 
+// === start RELOCATE BY CLICK IN MOBILE
+if (document.querySelector("[data-moblink]")) {
+	if (window.innerWidth < 1024) {
+		linkInMobile('[data-moblink]');
+	}
+	function linkInMobile(el) {
+		const allLinks = document.querySelectorAll(el);
+
+		allLinks.forEach((link) => {
+			link.addEventListener("click", (e) => {
+				let link = e.currentTarget.dataset.moblink;
+				location.href = link;
+			});
+		});
+	}
+
+}
+// === end RELOCATE BY CLICK IN MOBILE
+
 // === start ADD TO FAVORITE
 const favBtns = document.querySelectorAll('.jsFav');
 if (favBtns.length > 0) {
@@ -397,49 +460,52 @@ if (toCart.length > 0) {
 // === end press button "В КОРЗИНУ"
 
 // === start ROLL-LIST
-if (document.getElementById("categoriesList")) {
-	const box = document.getElementById("categoriesList");
+if (document.querySelector(".jsCatList")) {
+	const boxes = document.querySelectorAll(".jsCatList");
 
-	let isDown = false;
-	let startX;
-	let startY;
-	let scrollLeft;
-	let scrollTop;
+	boxes.forEach((box) => {
 
-	box.addEventListener("mousedown", (e) => {
-		isDown = true;
-		startX = e.pageX - box.offsetLeft;
-		startY = e.pageY - box.offsetTop;
-		scrollLeft = box.scrollLeft;
-		scrollTop = box.scrollTop;
-		box.style.cursor = "grabbing";
-	});
+		let isDown = false;
+		let startX;
+		let startY;
+		let scrollLeft;
+		let scrollTop;
 
-	box.addEventListener("mouseleave", () => {
-		isDown = false;
-		box.style.cursor = "grab";
-	});
+		box.addEventListener("mousedown", (e) => {
+			isDown = true;
+			startX = e.pageX - box.offsetLeft;
+			startY = e.pageY - box.offsetTop;
+			scrollLeft = box.scrollLeft;
+			scrollTop = box.scrollTop;
+			box.style.cursor = "grabbing";
+		});
 
-	box.addEventListener("mouseup", () => {
-		isDown = false;
-		box.style.cursor = "grab";
-	});
+		box.addEventListener("mouseleave", () => {
+			isDown = false;
+			box.style.cursor = "grab";
+		});
 
-	document.addEventListener("mousemove", (e) => {
-		if (!isDown) return;
-		e.preventDefault();
-		const x = e.pageX - box.offsetLeft;
-		const y = e.pageY - box.offsetTop;
-		const walkX = (x - startX) * 1; // Change this number to adjust the scroll speed
-		const walkY = (y - startY) * 1; // Change this number to adjust the scroll speed
-		box.scrollLeft = scrollLeft - walkX;
-		box.scrollTop = scrollTop - walkY;
+		box.addEventListener("mouseup", () => {
+			isDown = false;
+			box.style.cursor = "grab";
+		});
+
+		document.addEventListener("mousemove", (e) => {
+			if (!isDown) return;
+			e.preventDefault();
+			const x = e.pageX - box.offsetLeft;
+			const y = e.pageY - box.offsetTop;
+			const walkX = (x - startX) * 1; // Change this number to adjust the scroll speed
+			const walkY = (y - startY) * 1; // Change this number to adjust the scroll speed
+			box.scrollLeft = scrollLeft - walkX;
+			box.scrollTop = scrollTop - walkY;
+		});
 	});
 }
 // === end ROLL-LIST
 
 // === start SLIDE-LIST
-if(document.querySelector(".slide-list")){
+if (document.querySelector(".slide-list")) {
 	const listBlock = document.querySelector(".slide-list");
 	const list = document.querySelector(".list");
 	const listBtn = document.querySelector(".slide-btn");
@@ -496,7 +562,7 @@ if (document.querySelector(".jsDrop")) {
 				} else {
 					content.style.maxHeight = null;
 					e.currentTarget.classList.remove("show");
-					if(el.closest(".list-item").classList.contains("active")){
+					if (el.closest(".list-item").classList.contains("active")) {
 						el.closest(".list-item").classList.remove("active");
 					}
 				}
@@ -594,7 +660,7 @@ if (document.querySelector(".jsDropChk")) {
 				drop.style.maxHeight = null;
 				content.classList.remove("show");
 
-				if(e.currentTarget.closest(".list-item").classList.contains("active")){
+				if (e.currentTarget.closest(".list-item").classList.contains("active")) {
 					e.currentTarget.closest(".list-item").classList.remove("active");
 				}
 				writeChecked(lists);
@@ -638,7 +704,7 @@ if (document.querySelector(".jsDropChk")) {
 			) {
 				el.classList.remove("show");
 				el.nextElementSibling.style.maxHeight = null;
-				if(el.closest(".list-item").classList.contains("active")){
+				if (el.closest(".list-item").classList.contains("active")) {
 					el.closest(".list-item").classList.remove("active");
 				}
 			}
