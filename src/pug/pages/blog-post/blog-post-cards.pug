@@ -1,0 +1,54 @@
+.cards
+	.cards-item
+		.cards-wrapper
+			.cards-top
+						.cards-discount 0%
+						button(class="cards-fav jsFav")
+							+mono-svg('heart', '', '0 0 20 18')
+			.cards-img
+				img(src="uploads/popular/pop-1.jpg" alt="")
+			.cards-content
+				.cards-info
+					.cards-status.active
+						i
+						| Под заказ
+					.cards-amount 
+						span Мин. заказ: 
+						| от&nbsp;
+						span 10
+						| &nbsp;шт.
+				.cards-desc
+					.cards-title Светильник напольный Simig Lighting
+					.cards-price
+						span 12 400
+						| &nbsp;₽
+			.cards__hover
+				button(class="btn btn--accent btn--xl jsToCart") В корзину
+				+quantity(10)
+	
+	.cards-item
+		.cards-wrapper
+			.cards-top
+						.cards-discount 0%
+						button(class="cards-fav jsFav")
+							+mono-svg('heart', '', '0 0 20 18')
+			.cards-img
+				img(src="uploads/popular/pop-2.jpg" alt="")
+			.cards-content
+				.cards-info
+					.cards-status
+						i
+						| Под заказ
+					.cards-amount 
+						span Мин. заказ: 
+						| от&nbsp;
+						span 10
+						| &nbsp;шт.
+				.cards-desc
+					.cards-title Светильник напольный Simig Lighting
+					.cards-price
+						span 12 400
+						| &nbsp;₽
+			.cards__hover
+				button(class="btn btn--accent btn--xl jsToCart") В корзину
+				+quantity(10)

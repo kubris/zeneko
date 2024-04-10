@@ -21,6 +21,11 @@
 
 .accent-color { color: var(--accent); }
 .accent-bg { background-color: var(--accent); }
+.bg-gray {
+	padding: 30px;
+	background-color: var(--light-gray);
+	@include mw768 {padding: 20px 10px}
+}
 
 .underline {
 	position: relative;
@@ -155,6 +160,24 @@
 		height: 1px;
 		width: 16px;
 		background-color: var(--text-gray);
+	}
+}
+
+// visible in same resolutions
+.show {
+	&-xl {
+		display: block;
+		@include mw1024 {display: none}
+		@include mw768 {display: none}
+	}
+	&-lg {
+		display: none;
+		@include mw1024 {display: block}
+		@include mw768 {display: none}
+	}
+	&-sm {
+		display: none;
+		@include mw768 {display: block}		
 	}
 }
 
