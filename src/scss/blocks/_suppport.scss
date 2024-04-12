@@ -1,0 +1,16 @@
+// -- support
+.support {
+
+	&__breadcrumbs {
+		margin: 10px 0 70px;
+		@include mw1440 {margin-bottom: 50px;}
+		@include mw1024 {margin-bottom: 60px;}
+		@include mw768 {margin-bottom: 40px;}
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 40px;
+		@include mw1024 {margin-bottom: 30px;}
+	}
+}

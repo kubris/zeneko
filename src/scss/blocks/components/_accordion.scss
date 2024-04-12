@@ -1,0 +1,98 @@
+// -- start accordion
+.accordion {
+	&-wrapper {
+		max-width: 1056px;
+		margin: 0 auto;
+	}
+	&-btn {
+		position: relative;
+		padding: 28px 35px 28px 0;
+		width: 100%;
+		text-align: left;
+		font-size: 20px;
+		color: var(--accent);
+		border-top: 1px solid var(--gray);
+		border-bottom: 1px solid var(--gray);
+		transition: 0.4s;
+		outline: none;
+		cursor: pointer;
+		@include mw768 {
+			font-size: 16px;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 36px;
+			height: 1px;
+			background-color: var(--accent);
+			@include mw768 {
+				right: 10px;
+				width: 26px;
+			}
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			right: 37px;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 1px;
+			height: 36px;
+			background-color: var(--accent);
+			transition: height 0.2s ease-in;
+			@include mw768 {
+				right: 22px;
+				height: 26px;
+			}
+		}
+		&.active::before {
+			height: 0;
+		}
+		&.active {
+			border-bottom: none;
+			&:last-of-type {
+				& + .accordion-content {
+					border-bottom: 1px solid var(--gray);
+				}
+			}
+		}
+	}
+
+	&-content {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+
+		font-size: 16px;
+
+		& + .accordion-btn {
+			margin-top: -1px;
+		}
+
+		& p:first-child {
+			padding-top: 20px;
+		}
+		& p:last-child {
+			padding-bottom: 20px;
+		}
+		& p + p {
+			margin-top: 15px;
+		}
+
+		ul,li {
+			list-style-type: disc;
+			list-style-position: inside;
+		}
+
+		.acc-title {
+			margin: 10px 0 20px;
+			font-weight: 600;
+		}
+	}
+}
+
+// -- end accordion
