@@ -1,0 +1,14 @@
+extends layout/main 
+
+block variables
+	-var title = 'Оформление заказа'
+
+block content
+
+	include pages/order/order-breadcrumbs
+	
+	include pages/order/order-block
+
+	include modules/main-form/main-form
+	
+	include modules/modals/modal-order-thx

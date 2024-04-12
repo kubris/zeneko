@@ -40,3 +40,10 @@
 		@content;
 	}
 }
+
+// @include mw380 {}
+@mixin mw380(){
+	@media (max-width: 380px) {
+		@content;
+	}
+}

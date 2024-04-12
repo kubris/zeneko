@@ -322,6 +322,27 @@ if (document.querySelector(".callback-bg")) {
 }
 // === end MODAL CALLBACK
 
+// === start MODAL ORDER BG
+if (document.querySelector(".modal__order-bg")) {
+	const modalOrder = document.querySelector(".modal__order-bg");
+	const modalOpenBtn = document.querySelectorAll(".jsOrder");
+	const modalCloseBtn = document.querySelector(".jsOrderClose");
+
+	modalOpenBtn.forEach((btn) => {
+		btn.addEventListener("click", (e) => {
+			e.preventDefault();
+			modalOrder.classList.add("show");
+			disableScroll();
+		});
+	});
+
+	modalCloseBtn.addEventListener("click", (e) => {
+		modalOrder.classList.remove("show");
+		enableScroll();
+	});
+}
+// === end MODAL ORDER BG
+
 // === start TAB
 if (document.querySelector(".drop-head")) {
 	const acc = document.getElementsByClassName("drop-head");

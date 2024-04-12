@@ -1,0 +1,76 @@
+//- modal__order
+.modal__order {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	max-width: 760px;
+	width: 100%;
+	margin: 0 20px;
+	padding: 70px 20px 80px;
+	background-color: var(--bg-white);
+	color: var(--text-gray);
+	@include mw768 {padding: 40px 20px 55px;}
+
+	&-bg {
+		transform: translateY(-150%);
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100%;
+		z-index: 10;
+		background: #111111cc;
+		transition: transform 0.3s ease-out;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&.show {
+			transform: translateY(0);
+		}
+	}
+
+	&-logo {
+		margin-bottom: 50px;
+		font-size: 40px;
+		line-height: 1;
+		font-weight: 400;
+		font-family: var(--font-head);
+		color: var(--accent);
+	}
+
+	&-num {
+		margin-bottom: 30px;
+		font-size: 20px;
+		line-height: 120%;
+		font-weight: 400;
+		color: var(--text-gray);
+		text-transform: uppercase;
+	}	
+
+	&-thx {
+		margin-bottom: 10px;
+		font-size: 28px;
+		font-weight: 500;
+		line-height: 120%;
+		color: var(--dark);
+		text-align: center;
+	}	
+
+	&-text {
+		margin-bottom: 40px;
+		max-width: 395px;
+		width: 100%;
+		text-align: center;
+	}	
+
+	&-btn {
+		height: 60px;
+		max-width: 400px;
+		width: 100%;
+		font-size: 20px;
+	}
+}

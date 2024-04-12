@@ -1,0 +1,253 @@
+// -- order
+.order {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap:30px;
+
+	@include mw1440 {
+		grid-gap: 20px;
+	}
+
+	@include mw1024 {
+		grid-template-columns: 1fr;
+		grid-gap: 60px;
+	}
+	@include mw768 {
+		grid-gap: 0;
+	}
+
+	&__breadcrumbs {
+		margin: 10px 0 40px;
+
+		@include mw768 {
+			margin-bottom: 30px
+		}
+	}
+
+	&-offer {
+		display: flex;
+		flex-direction: column;
+
+		.order-block__title {
+			margin-bottom: 50px;
+			@include mw768 {margin-bottom: 30px}
+		}
+	}
+
+	&__form {
+		margin-bottom: 60px;
+		display: flex;
+		flex-direction: column;
+		@include mw1024 {margin-bottom: 0}
+
+		&-row {
+			display: flex;
+			gap: 30px;
+			width: 100%;
+			@include mw1024 {gap: 20px;}
+			@include mw768 {
+				flex-direction: column;
+				gap: 0;
+			}
+
+			& label {
+				display: block;
+				margin-bottom: 20px;
+				width: 100%;
+				border-bottom: 1px solid var(--gray);
+				input {
+					padding: 10px 0;
+					width: 100%;
+					text-transform: uppercase;
+					color: var(--accent);
+					&::placeholder {
+						color: var(--text-gray);
+					}
+					&:focus {
+						&::placeholder {
+							color: var(--accent);
+						}
+					}
+				}
+			}
+			
+		}
+
+		&-title {
+			margin-bottom: 30px;
+			font-size: 26px;
+			line-height: 120%;
+			font-weight: 500;
+			color: var(--accent);
+			@include mw768 {
+				margin-top: 20px;
+				margin-bottom: 20px;
+				font-size: 20px;
+				font-weight: 400;
+				line-height: 130%;
+			}
+		}
+
+		&-radio {
+			margin-bottom: 60px;
+		}
+
+		&-policy {
+			.btn {margin-bottom: 15px}
+			@include mw768 {
+				display: none;
+			}
+			&>div {
+				font-size: 14px;
+				.un-line {
+					white-space: normal;
+				}
+			}
+		}
+
+		&-devbtns {
+			display: flex;
+			gap: 30px;
+			@include mw768 {
+				flex-direction: column;
+				gap: 40px;
+			}
+
+			&>div {
+				width: 100%;
+			}
+			&.order__form-row {
+				.radio-btn {
+					border: none;
+				}
+			}
+		}
+	}
+
+	&-block {
+		margin-left: 166px;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-auto-rows: auto;
+		grid-gap: 30px;
+		@include mw1440 {margin-left: 133px;}
+		@include mw1024 {margin-left: 0;}
+
+		&__amount {
+			&-item {
+				display: flex;
+				justify-content: space-between;
+				padding: 20px 0;
+				border-bottom: 1px solid var(--gray);
+				&:last-child {
+					border: none;
+					font-weight: 600;
+				}
+
+				&>span {
+					font-weight: 600;
+					line-height: 120%;
+				}
+			}
+		}
+
+		&__title {
+			margin-bottom: 30px;
+			font-family: var(--font-head);
+			font-size: 36px;
+			line-height: 110%;
+			color: var(--accent);
+
+			@include mw768 {
+				font-size: 24px
+			}
+		}
+
+		&__item {
+			display: grid;
+			grid-template-columns: 93px 1fr;
+			grid-gap: 20px;
+
+			padding: 20px 0;
+			border-bottom: 1px solid var(--gray);
+
+			&:first-child {
+				border-top: 1px solid var(--gray);
+			}
+		}
+
+		&__img {
+			img {
+				object-fit: cover;
+				width: 93px;
+				height: 93px;
+			}
+		}
+
+		&__top {
+			display: flex;
+			justify-content: space-between;
+			gap: 15px;
+
+			@include mw768 {
+				gap: 15px
+			}
+		}
+
+		&__price {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: space-between;
+
+			font-size: 16px;
+			font-weight: 600;
+			line-height: 120%;
+			color: var(--accent);
+			white-space: nowrap;
+		}
+
+		&__desc {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: 10px;
+
+			&-text {
+				display: flex;
+				justify-content: space-between;
+				gap: 20px;
+				font-size: 16px;
+				max-width: 230px;
+
+				@include mw768 {
+					font-size: 14px;
+					letter-spacing: -0.5px;
+				}
+			}
+
+			&-info {
+				display: flex;
+				justify-content: space-between;
+				gap: 20px;
+				width: 100%;
+				color: var(--text-gray);
+
+				@include mw768 {
+					font-size: 12px
+				}
+			}
+
+			&-num {
+				margin-top: auto;
+				color: var(--text-gray);
+				font-size: 12px;
+				line-height: 120%;
+			}
+		}		
+
+		.order__form-policy {
+			@include mw768 {display: block;}
+		}
+	}
+}

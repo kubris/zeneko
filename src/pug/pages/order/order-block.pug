@@ -1,0 +1,111 @@
+section.offset
+	.container
+		.order
+			form.order-offer
+				.order-block__title Оформление заказа
+				.order__form
+					.order__form-row
+						label
+							input(type="text" placeholder="Имя")
+						label
+							input(type="text" placeholder="Фамилия")
+					.order__form-row
+						label
+							input(type="text" placeholder="Email")
+						label
+							input(type="text" placeholder="Телефон")
+				
+				.order__form
+					.order__form-title Адрес доставки
+					.order__form-row
+						label
+							input(type="text" placeholder="Адрес")
+					.order__form-row
+						label
+							input(type="text" placeholder="Населенный пункт")
+						label
+							input(type="text" placeholder="Индекс")
+					.order__form-row
+						label
+							input(type="text" placeholder="Дом")
+						label
+							input(type="text" placeholder="Квартира")
+					.order__form-row
+						label
+							input(type="text" placeholder="Коммантарий к заказу")
+			
+				.order__form-radio
+					.order__form-title Доставка
+
+					.order__form-row.order__form-devbtns
+						div
+							label.radio-btn
+								input(type='radio' name="dev-radio" checked)
+								span Стандартная доставка
+							.order__form-delivery
+									span Доставка 
+										| &nbsp;16 
+										| декабря
+									span 12 000
+										| &nbsp;₽
+						div
+							label.radio-btn
+								input(type='radio' name="dev-radio")
+								span Экспресс доставка
+							.order__form-delivery
+									span Доставка 
+										| &nbsp;27
+										| ноября
+									span 28 000
+										| &nbsp;₽
+
+				.order__form.order__form-policy
+					button(class="btn btn--accent btn--full fz20 jsOrder") Оформить заказ
+					div Оформляя заказ, Вы соглашаетесь с 
+						a(class="accent-color un-line" href="#") Политикой конфиденциальности
+
+			.order-block
+				.order-block__goods
+					.order-block__title Ваш заказ
+					.order-block__grid
+						.order-block__item
+							.order-block__img
+								img(src="uploads/cart/cart-1.jpg", alt="")
+							.order-block__top
+								.order-block__desc
+									.order-block__desc-text Абстрактная настольная лампа из витражного стекла
+									.order-block__desc-info
+										.order-block__desc-weight 53.2 кг
+										
+								.order-block__price
+									span 12 400
+										| &nbsp;₽
+									.order-block__desc-num Количество:
+										span &nbsp;10
+						.order-block__item
+							.order-block__img
+								img(src="uploads/cart/cart-1.jpg", alt="")
+							.order-block__top
+								.order-block__desc
+									.order-block__desc-text Абстрактная настольная лампа из витражного стекла
+									.order-block__desc-info
+										.order-block__desc-weight 53.2 кг
+								.order-block__price
+									span 12 400
+										| &nbsp;₽
+									.order-block__desc-num Количество:
+										span &nbsp;10
+					.order-block__amount
+						.order-block__amount-item Товар на сумму:
+							span 248 000
+								| &nbsp;₽
+						.order-block__amount-item Доставка:
+							span 12 000
+								| &nbsp;₽
+						.order-block__amount-item Итого:
+							span 260 000
+								| &nbsp;₽
+				.order__form.order__form-policy
+					button(class="btn btn--accent btn--full fz20 jsOrder") Оформить заказ
+					div Оформляя заказ, Вы соглашаетесь с 
+						a(class="accent-color un-line" href="#") Политикой конфиденциальности

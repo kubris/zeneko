@@ -1,0 +1,56 @@
+section.offset
+	.container
+		.cart-block
+			.cart-block__goods
+				.cart-block__title Корзина
+				.cart-block__grid
+					.cart-block__item
+						.cart-block__img
+							img(src="uploads/cart/cart-1.jpg", alt="")
+						.cart-block__top
+							.cart-block__desc
+								span.cart-block__desc-text Абстрактная настольная лампа из витражного стекла 
+								span.cart-block__desc-weight 53.2 кг
+							.cart-block__price
+								span 12 400
+									| &nbsp;₽
+						.cart-block__bottom
+							button(class="accent-color un-line") Удалить
+							button(class="accent-color un-line") В избранное
+							+quantity-shown(10)
+					.cart-block__item
+						.cart-block__img
+							img(src="uploads/cart/cart-2.jpg", alt="")
+						.cart-block__top
+							.cart-block__desc
+								span.cart-block__desc-text Абстрактная настольная лампа из витражного стекла 
+								span.cart-block__desc-weight 53.2 кг
+							.cart-block__price
+								span 12 400
+									| &nbsp;₽
+						.cart-block__bottom
+							button(class="accent-color un-line") Удалить
+							button(class="accent-color un-line") В избранное
+							+quantity-shown(10)
+				.cart-block__total
+					| Итого:
+					span 248 000
+						| &nbsp;₽
+				.cart-block__buttons
+					a(class="btn btn--transp btn--xl" href="category.html") Продолжить покупки
+					button(class="btn btn--accent btn--xl") Оформить заказ
+					.cart-block__manager Если у вас остались вопросы, вы можете 
+						a(class="accent-color un-line" href="tel:+79000000000") Связаться с менеджером
+		
+		//- для пустой корзины
+		.cart-block
+			.cart-block__goods
+					.cart-block__title Корзина
+					.cart-block__grid
+						.cart-block__item.cart-empty
+							span.cart-empty__title В корзине нет товаров
+							p Загляните в каталог, чтобы выбрать товары или найдите нужное в поиске
+					a(class="btn btn--transp btn--xl" href="category.html") Перейти к покупкам
+
+
+
