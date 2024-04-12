@@ -1,5 +1,32 @@
 // --error-404
-.error {
-	margin: 0 auto;
-	max-width: 1920px;
+.error-404 {
+	position: relative;
+	z-index: 10;
+	text-align: center;
+	&__bg {
+		height: calc(100vh - 92px);
+		width: 100vw;
+		padding: 0 20px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--accent);
+	}
+
+	&__title {
+		font-size: clamp(120px, 18vw, 260px);
+		font-weight: 700;
+		line-height: 1;
+		color: var(--white);
+	}
+
+	&__text {
+		margin: 40px 0 60px;
+		color: var(--white);
+		font-size: clamp(26px, 4vw, 36px);
+		line-height: 110%;
+		font-family: var(--font-head);
+		max-width: 645px;
+	}
 }

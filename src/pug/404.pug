@@ -1,0 +1,11 @@
+extends layout/no-footer 
+
+block variables
+	-var title = 'Страница не найдена!'
+
+block content
+	.error-404__bg
+		.error-404
+			.error-404__title 404
+			.error-404__text Извините, страница не найдена, но на нашем сайте еще много интересного
+			a(class="btn btn--white btn--xl" href="/") На главную страницу

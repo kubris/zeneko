@@ -933,5 +933,4 @@ if (document.querySelector(".accordion-btn")) {
 		true
 	);
 }
-
 // === end ACCORDION

@@ -1,0 +1,37 @@
+// -- favorite
+.favorite {
+
+	&__breadcrumbs {
+		margin: 10px 0 40px;
+		@include mw768 {margin-bottom: 20px;}
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		@include mw1024 {margin-bottom: 20px}
+
+		& + .cart-block__goods.favorite-empty {display: grid;}
+	}
+
+	&__grid {
+		&.goods-popular__grid {
+
+			.goods-popular__grid-item {
+				&:first-child {
+					grid-column: auto;
+				}
+				&:last-child {
+					margin-left: auto;
+					grid-column: auto;
+				}
+			}
+		}
+	}
+
+	&-empty {
+		&.cart-block__goods {
+			//display: grid;
+			display: none;
+		}
+	}
+}
