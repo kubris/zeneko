@@ -43,7 +43,7 @@ mixin quantity-shown(minGoods)
 			span.pls
 //- end quantity
 
-//- start breadcrumbs
+//- start breadcrumb
 //- items:крошки с сылками; last: последняя крошка, cls: доп.класс к блоку обёртке, links: ссылки на страницы по порядку, вместе с последней
 mixin breadcrumb(items, last, cls, links)
 	- cls= cls || '' 
@@ -71,4 +71,17 @@ mixin breadcrumb(items, last, cls, links)
 					a(href='' + links[i], title=item, itemprop='item')
 						span= last
 						meta(itemprop='position' content=i)
+//- end breadcrumb
+
+//- start breadcrumbAll
+mixin breadcrumbAll(items, cls, links)
+	- cls= cls || ''
+	div(class="breadcrumbs bc-all" + ' ' + cls)
+		- let i = 0;
+		ul
+			each item in items
+				li
+					a(href="" + links[i])
+						span= item
+
 //- end breadcrumbs

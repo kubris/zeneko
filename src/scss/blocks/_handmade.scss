@@ -1,5 +1,12 @@
 // -- handmade
 .handmade {
+	padding-top: 200px;
+	background-color: var(--white);
+
+	@include mw1440 {padding-top: 180px}
+	@include mw1024 {padding-top: 120px}
+	@include mw768 {padding-top: 100px}
+
 	&__block {
 		margin-left: auto;
 		margin-right: 215px;

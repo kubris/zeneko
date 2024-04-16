@@ -175,8 +175,8 @@ if (document.querySelector(".pg-grid__gall")) {
 		freeMode: true,
 		breakpoints: {
 			1441: {
-			  slidesPerView: 3,
-			  spaceBetween: 30,
+				slidesPerView: 3,
+				spaceBetween: 30,
 			},
 		},
 	});
@@ -186,7 +186,7 @@ if (document.querySelector(".pg-grid__gall")) {
 			swiper: prodSliderMain,
 		}
 	});
-	
+
 }
 // === end GRID GALLERIES SLIDER
 // === start NEWEST-SWIPER SLIDER
@@ -440,7 +440,7 @@ if (document.querySelector("[data-moblink]")) {
 	if (window.innerWidth < 1024) {
 		linkInMobile('[data-moblink]');
 	}
-	
+
 	function linkInMobile(el) {
 		const allLinks = document.querySelectorAll(el);
 
@@ -454,7 +454,7 @@ if (document.querySelector("[data-moblink]")) {
 
 	let rz = false;
 	window.addEventListener(
-		"resize",		
+		"resize",
 		function () {
 			if (window.innerWidth <= 1024 && rz === false) {
 				linkInMobile('[data-moblink]');
@@ -562,13 +562,16 @@ if (document.querySelector(".jsCatList")) {
 // === end ROLL-LIST
 
 // === start SLIDE-LIST
-if (document.querySelector(".slide-list")) {
-	const listBlock = document.querySelector(".slide-list");
+const listBlock = document.querySelector(".slide-list");
+if (listBlock) {
 	const list = document.querySelector(".list");
 	const listBtn = document.querySelector(".slide-btn");
 
 	let startHeight = listBlock.clientHeight;
 	let fullHeight = list.scrollHeight;
+
+	// console.log("startHeight: " + startHeight);
+	// console.log("fullHeight: " + list.scrollHeight);
 
 	listBtn.addEventListener("click", (e) => {
 		e.stopPropagation();
@@ -879,32 +882,6 @@ if (document.querySelector(".filter-range")) {
 }
 // -- end FILTER RANGE
 
-// - start SLIDE LIST
-const listBlock = document.querySelector(".slide-list");
-if (listBlock) {
-	const list = document.querySelector(".list");
-	const listBtn = document.querySelector(".slide-btn");
-
-	let startHeight = listBlock.clientHeight;
-	let fullHeight = list.scrollHeight;
-
-	// console.log("startHeight: " + startHeight);
-	// console.log("fullHeight: " + list.scrollHeight);
-
-	listBtn.addEventListener("click", (e) => {
-		e.stopPropagation();
-
-		if (!listBtn.classList.contains("show")) {
-			listBlock.style.maxHeight = fullHeight + "px";
-			e.currentTarget.classList.add("show");
-		} else {
-			listBlock.style.maxHeight = startHeight + "px";
-			e.currentTarget.classList.remove("show");
-		}
-	});
-}
-// - end SLIDE LIST
-
 // - start FILTER SHOW MORE
 const filterShowMoreBtn = document.querySelectorAll(".jsDropMore");
 if (filterShowMoreBtn) {
@@ -1024,11 +1001,25 @@ if (document.querySelector(".jsTab")) {
 // === start SMOOTH-SCROLL TO ANCHOR
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 	anchor.addEventListener('click', function (e) {
-		 e.preventDefault();
+		e.preventDefault();
 
-		 document.querySelector(this.getAttribute('href')).scrollIntoView({
-			  behavior: 'smooth'
-		 });
+		document.querySelector(this.getAttribute('href')).scrollIntoView({
+			behavior: 'smooth'
+		});
 	});
 });
 // === end SMOOTH-SCROLL TO ANCHOR
+
+// === start PARALLAX for one top block
+if (document.getElementById("parallax")) {
+	const parallax = document.getElementById("parallax");
+	let speed = 0.5;
+	parallax.style = 'position:relative;';
+	parallax.nextElementSibling.style = 'position:relative;z-index:100';
+	window.addEventListener("scroll", function () {
+		let offsetY = window.pageYOffset;
+		parallax.style.top = offsetY * speed + "px";
+	});
+}
+// === end PARALLAX for one top block
+

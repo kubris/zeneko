@@ -52,7 +52,9 @@ gulp.task("clean:docs", function (callback) {
 gulp.task('pug:docs', function(){
 	return gulp.src('./src/pug/*.pug')
 		.pipe(plumber(plumberNotify('PUG')))
-		.pipe(pug())
+		.pipe(pug({
+			pretty: true
+		}))
 		.pipe(webpHTML())
 		.pipe(gulp.dest('./docs'))
 });
@@ -67,7 +69,7 @@ gulp.task("sass:docs", function () {
 		.pipe(sass())
 		.pipe(groupMedia())
 		.pipe(autoprefixer(['last 15 versions', '> 1%']))
-		.pipe(csso())
+		//.pipe(csso())
 		.pipe(gulp.dest("./docs/css/"));
 });
 // end SCSS
