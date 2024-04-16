@@ -20,7 +20,7 @@ gulp.task('default',
 gulp.task(
 	'docs', 
 	gulp.series('clean:docs', 
-		gulp.parallel('pug:docs', 'sass:docs', 'imagesWebp:docs', 'images:docs', 'fonts:docs', 'uploadsWebp:docs', 'uploads:docs', 'js:docs', 'root:docs'),
+		gulp.parallel('pug:docs', 'sass:docs', 'imagesWebp:docs', 'images:docs', 'fonts:docs', 'uploadsWebp:docs', 'uploads:docs', 'svgSprite:docs', 'svgSpriteMulti:docs', 'svg:docs', 'js:docs', 'root:docs'),
 		gulp.parallel('server:docs')
 ));
 // === end GULP RUN ===

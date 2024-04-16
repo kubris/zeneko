@@ -180,12 +180,12 @@
 			@include mw768 { grid-template-columns: 320px }
 			@include mw380 { grid-template-columns: 1fr }
 
-			&>a {
+			.btn-continue {
 				grid-column: 2 / 3;
 				@include mw1024 {grid-column: 1 / 2}
 				@include mw768 {grid-column: auto}
 			}
-			&>button {
+			.btn-order {
 				grid-column: 3 / 4;
 				@include mw1024 {grid-column: 2 / 3}
 				@include mw768 {grid-column: auto}

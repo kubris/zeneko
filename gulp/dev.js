@@ -16,9 +16,6 @@ const gulp 			= require('gulp'),
 		imagemin 	= require("gulp-imagemin"),
 		webp 			= require("gulp-webp");
 
-// const webpack		= require('webpack-stream');
-// const babel			= require('gulp-babel');
-
 // === stop VARIABLES ===
 
 // === SERVER
@@ -37,11 +34,6 @@ const plumberNotify = (title) => {
 		})
 	}
 };
-
-// === BABEL 
-// const babelSettings = {
-// 	"presets": ["@babel/preset-env"]
-// } 
 
 // === stop VARIABLES ===
 
@@ -80,13 +72,13 @@ gulp.task('sass:dev', function(){
 
 // === start IMAGES ===
 gulp.task('images:dev', function(){
-	return gulp.src('./src/images/**/*.+(jpg|jpeg|png)')
+	return gulp.src('./src/images/**/*.+(jpg|jpeg|png)', { dot: true })
 		.pipe(changed('./build/images/'))
 		.pipe(imagemin({ verbose: true }))
 		.pipe(gulp.dest('./build/images/'))
 });
 gulp.task('imagesWebp:dev', function(){
-	return gulp.src('./src/images/**/*.+(jpg|jpeg|png)')
+	return gulp.src('./src/images/**/*.+(jpg|jpeg|png)', { dot: true })
 		.pipe(changed('./build/images/'))
 		.pipe(webp())
 		.pipe(gulp.dest('./build/images/'))
@@ -95,13 +87,13 @@ gulp.task('imagesWebp:dev', function(){
 
 // === start UPLOADS ===
 gulp.task('uploads:dev', function(){
-	return gulp.src('./src/uploads/**/*.+(jpg|jpeg|png)')
+	return gulp.src('./src/uploads/**/*.+(jpg|jpeg|png)', { dot: true })
 		.pipe(changed('./build/uploads/'))
 		.pipe(imagemin({ verbose: true }))
 		.pipe(gulp.dest('./build/uploads/'))
 });
 gulp.task('uploadsWebp:dev', function(){
-	return gulp.src('./src/uploads/**/*.+(jpg|jpeg|png)')
+	return gulp.src('./src/uploads/**/*.+(jpg|jpeg|png)', { dot: true })
 		.pipe(changed('./build/uploads/'))
 		.pipe(webp())
 		.pipe(gulp.dest('./build/uploads/'))
@@ -171,7 +163,7 @@ gulp.task('fonts:dev', function(){
 
 // === start ROOT'S REPLACE ===
 gulp.task('root:dev', function(){
-	return gulp.src('./src/*.+(ico|php|htaccess|txt)')
+	return gulp.src('./src/*.+(ico|php|htaccess|txt)', { dot: true })
 		.pipe(changed('./build/'))
 		.pipe(gulp.dest('./build/'))
 });

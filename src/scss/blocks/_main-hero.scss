@@ -18,8 +18,10 @@
 	}
 	.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
 		bottom: 50px;
+		width: 50%;
 		@include mw1024 {
 			bottom: 30px;
+			width: 100%;
 		}
 		@include mw768 {
 			bottom: 20px;

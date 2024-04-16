@@ -247,6 +247,7 @@
 		}		
 
 		.order__form-policy {
+			display: none;
 			@include mw768 {display: block;}
 		}
 	}

@@ -99,6 +99,7 @@
 	}
 }
 
-*[data-postlink] {
+*[data-postlink],
+*[data-moblink] {
 	cursor: pointer;
 }

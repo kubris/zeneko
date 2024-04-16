@@ -3,20 +3,53 @@ section.product-goods.offset
 		include product-breadcrumbs
 
 		.product-goods__grid.pg-grid
-			.pg-grid__gal
-				.pg-grid__gal-img
-					.goods-popular__grid-top
-						.goods-popular__grid-discount 0%
-						button(class="goods-popular__grid-fav jsFav")
-							+mono-svg('heart', '', '0 0 20 18')
-					a(class="goods-popular__grid-img" data-fslightbox="prod-id" href="uploads/products/lamp-main.jpg")
-						img(src="uploads/products/lamp-main.jpg", alt="")
-				a(class="pg-grid__gal-img" data-fslightbox="prod-id" href="uploads/products/lamp-sub-1.jpg")
-					img(src="uploads/products/lamp-sub-1.jpg", alt="")
-				a(class="pg-grid__gal-img" data-fslightbox="prod-id" href="uploads/products/lamp-sub-2.jpg")
-					img(src="uploads/products/lamp-sub-2.jpg", alt="")
-				a(class="pg-grid__gal-img" data-fslightbox="prod-id" href="uploads/products/lamp-sub-3.jpg")
-					img(src="uploads/products/lamp-sub-3.jpg", alt="")
+			.pg-grid__gal-block
+				.pg-grid__gal.swiper
+					.swiper-wrapper
+						.pg-grid__gal-img.swiper-slide
+							.goods-popular__grid-top
+								.goods-popular__grid-discount 0%
+								button(class="goods-popular__grid-fav jsFav")
+									+mono-svg('heart', '', '0 0 20 18')
+							div(class="goods-popular__grid-img")
+								img(src="uploads/products/lamp-main.jpg", alt="")
+						.pg-grid__gal-img.swiper-slide
+							.goods-popular__grid-top
+								.goods-popular__grid-discount 0%
+								button(class="goods-popular__grid-fav jsFav")
+									+mono-svg('heart', '', '0 0 20 18')
+							div(class="goods-popular__grid-img")
+								img(src="uploads/products/lamp-sub-1.jpg", alt="")
+						.pg-grid__gal-img.swiper-slide
+							.goods-popular__grid-top
+								.goods-popular__grid-discount 0%
+								button(class="goods-popular__grid-fav jsFav")
+									+mono-svg('heart', '', '0 0 20 18')
+							div(class="goods-popular__grid-img")
+								img(src="uploads/products/lamp-sub-2.jpg", alt="")
+						.pg-grid__gal-img.swiper-slide
+							.goods-popular__grid-top
+								.goods-popular__grid-discount 0%
+								button(class="goods-popular__grid-fav jsFav")
+									+mono-svg('heart', '', '0 0 20 18')
+							div(class="goods-popular__grid-img")
+								img(src="uploads/products/lamp-sub-3.jpg", alt="")
+				
+				.pg-grid__gall.swiper
+					.swiper-wrapper
+						.swiper-slide
+							.pg-grid__gal-img
+								img(src="uploads/products/lamp-main.jpg", alt="")
+						.swiper-slide
+							.pg-grid__gal-img
+								img(src="uploads/products/lamp-sub-1.jpg", alt="")
+						.swiper-slide
+							.pg-grid__gal-img
+								img(src="uploads/products/lamp-sub-2.jpg", alt="")
+						.swiper-slide
+							.pg-grid__gal-img
+								img(src="uploads/products/lamp-sub-3.jpg", alt="")
+
 			.pg-content
 				.pg-content__title.h2 Абстрактная настольная лампа из витражного стекла 
 				.pg-content__price 12 400 ₽
@@ -35,4 +68,4 @@ section.product-goods.offset
 
 				.pg-content__btns
 					button.btn.btn--accent.btn--xl Добавить в корзину
-					button.btn.btn--transp.btn--xl Связаться с менеджером
+					button.btn.btn--transp.btn--xl.jsOpenModal Связаться с менеджером

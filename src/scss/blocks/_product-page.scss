@@ -1,35 +1,26 @@
 // -- product page grid
 .pg-grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 50% 50%;
 	align-items: stretch;
 	grid-gap: 30px;
 	@include mw1440 {grid-gap: 20px;}
 	@include mw1024 {
-		grid-template-columns: 1fr;
+		grid-template-columns: 100%;
 		grid-gap: 30px;
 	}
 
 	&__gal {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-auto-rows: auto;
-		align-content: flex-start;
-		grid-gap: 30px;
-		@include mw1440 {grid-gap: 20px;}
-
+		display: flex;
 		&-img {
+			margin-bottom: 30px;			
+			@include mw1440 {margin-bottom: 20px}
+
 			img {
 				max-width: unset;
+				aspect-ratio: 242 / 260;
 				width: 100%;
-				height: 100%;
-				object-fit: cover;
-			}
-			&:nth-child(1) {
-				grid-column: 1 / 4;
-				position: relative;
-				z-index: 1;
-				transition: padding 0.2s ease-out;
+				cursor: pointer;
 			}
 		}
 
