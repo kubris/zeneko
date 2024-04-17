@@ -894,6 +894,7 @@ if (filterShowMoreBtn) {
 }
 // - end FILTER SHOW MORE
 // === end CATALOG FILTER
+
 // === start ACCORDION
 if (document.querySelector(".accordion-btn")) {
 	const acc = document.getElementsByClassName("accordion-btn");
@@ -1010,7 +1011,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 // === end SMOOTH-SCROLL TO ANCHOR
 
-// === start PARALLAX for one top block
+// === start PARALLAX for only top block
 if (document.getElementById("parallax")) {
 	const parallax = document.getElementById("parallax");
 	let speed = 0.5;
@@ -1021,5 +1022,23 @@ if (document.getElementById("parallax")) {
 		parallax.style.top = offsetY * speed + "px";
 	});
 }
-// === end PARALLAX for one top block
+// === end PARALLAX for only top block
 
+// === start FORM HANDLER
+const forms = document.querySelectorAll('form');
+if(forms.length > 0){
+	forms.forEach((form) => {
+		form.addEventListener('submit', (e) => {
+			e.preventDefault();
+			let thxSending = document.querySelector('.modal__s-form-bg');
+			disableScroll();
+			thxSending.classList.add("show");
+			setTimeout(() => {
+				enableScroll();
+				thxSending.classList.remove("show");
+			 }, 3000)
+
+		});
+	});
+}
+// === end FORM HANDLER

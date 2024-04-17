@@ -1,0 +1,80 @@
+//- modal__order
+.modal__s-form {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	max-width: 760px;
+	width: 100%;
+	margin: 0 20px;
+	padding: 70px 20px 80px;
+	background-color: var(--bg-white);
+	color: var(--text-gray);
+	@include mw768 {padding: 40px 20px 55px;}
+
+	&-bg {
+		transform: translateY(-150%);
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100%;
+		z-index: 10;
+		background: #111111cc;
+		transition: transform 0.3s ease-out;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&.show {
+			transform: translateY(0);
+
+			.loader-circle::before {animation: l18 3s linear;}
+		}
+	}
+
+	&-title {
+		margin-bottom: 10px;
+		font-size: 28px;
+		font-weight: 500;
+		line-height: 120%;
+		color: var(--dark);
+		text-align: center;
+	}	
+
+	&-text {
+		margin-bottom: 40px;
+		max-width: 395px;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+/* Circle */
+.loader-circle {
+	position: absolute;
+	right: 20px;
+	top: 15px;
+	width: 22px;
+	aspect-ratio: 1;
+	border: 6px solid #ddd;
+	border-radius: 50%;
+	transform: rotate(45deg);
+ }
+ .loader-circle::before {
+	content: "";
+	position: absolute;
+	inset: -6px;
+	border-radius: 50%;
+	border: 6px solid var(--accent);
+	//animation: l18 3s linear;
+ }
+ @keyframes l18 {
+	  0%   {clip-path:polygon(50% 50%,0 0,0    0,0    0   ,0    0   ,0    0   )}
+	  25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0   ,100% 0   ,100% 0   )}
+	  50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+	  75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0    100%,0    100%)}
+	  100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0    100%,0    0   )}
+ }

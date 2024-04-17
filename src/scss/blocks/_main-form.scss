@@ -22,7 +22,6 @@
 	}
 }
 
-
 .s-form {
 	display: grid;
 	grid-template-columns: 1.5fr 3.6fr 2.85fr 2.2fr;
@@ -67,6 +66,7 @@
 			width: 100%;
 			font-size: 18px;
 			transition: box-shadow 0.2s;
+			color: var(--dark);
 			background-color: var(--light-gray);
 
 			@include mw768 {
@@ -75,7 +75,18 @@
 			}
 
 			&:hover {
-				box-shadow: 0 0 6px #aaa;
+				box-shadow: 0 0 6px #aaa
+			}
+
+			&::placeholder {
+				color: var(--text-gray);
+				text-transform: uppercase;
+				font-size: 14px;
+				transition: color 0.2s ease-out;
+			}
+
+			&:focus::placeholder {
+				color: var(--dark);
 			}
 		}
 
@@ -86,16 +97,17 @@
 				margin-top: 20px;
 			}
 		}
-	}
 
-	label>input {
-		color: var(--dark);
-	}
+		&.error {
+			position: relative;
+			&>input {
+				color: var(--red);
 
-	label>input::placeholder {
-		color: var(--dark);
-		text-transform: uppercase;
-		font-size: 14px;
+				&::placeholder {
+					color: var(--red);
+				}
+			}			
+		}
 	}
 
 	.accept-privacy {
@@ -155,4 +167,8 @@
 	input[type=checkbox]:checked+.accept::after {
 		opacity: 1;
 	}
+}
+
+.error-text {
+	color: var(--red);
 }
